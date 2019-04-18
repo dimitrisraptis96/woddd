@@ -1,7 +1,7 @@
 <h1 align='center'> WOD generator </h1>
 
 <p align='center'>
-  <img src='./assets/ouch.png' alt='snatching guy' width='50%'/>
+  <img src='./assets/ouch.png' alt='snatching guy' width='30%'/>
 </p>
 
 <p align='center'>
