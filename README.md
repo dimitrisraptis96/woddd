@@ -9,9 +9,9 @@
 </p>
 
 ## 🏃 TODO
-- [ ] Scrape some hot WODs 
+- [ ] Scrape some 🔥 WODs 
 - [ ] Find way to secure the wod data
 - [ ] UI design of the application
-- [ ] Build that shit
+- [ ] Build that 💩
 
 ## 🚧 WIP
