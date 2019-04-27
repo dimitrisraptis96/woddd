@@ -437,3 +437,5 @@ const wods = [
     workout: ["Deadlift (225/155 lb)", "Handstand Walk (in meters)"],
   },
 ];
+
+export default wods;
