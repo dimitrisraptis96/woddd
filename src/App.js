@@ -40,6 +40,16 @@ const Tagline = styled.p`
   text-align: center;
 `;
 
+const Title = styled.h1`
+  font-family: "Teko", sans-serif;
+  /* font-family: "Proza Libre", sans-serif; */
+  font-size: 1.5rem;
+
+  color: red;
+
+  text-align: center;
+`;
+
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
@@ -89,7 +99,7 @@ class App extends Component {
             <Image src={logo} alt="logo" />
             <Tagline>WOD Generator</Tagline>
 
-            {wod !== null && <Tagline>{wod.title}</Tagline>}
+            {wod !== null && <Title>{wod.title}</Title>}
 
             <button onClick={() => this.getWod()}>Generate</button>
           </Container>
