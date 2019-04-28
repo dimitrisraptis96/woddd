@@ -1,5 +1,7 @@
+import { hot } from "react-hot-loader/root";
 import React, { Component } from "react";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
+import Button from "@material-ui/core/Button";
 
 import theme from "./utils/theme";
 import wods from "./utils/wods";
@@ -100,8 +102,9 @@ class App extends Component {
             <Tagline>WOD Generator</Tagline>
 
             {wod !== null && <Title>{wod.title}</Title>}
-
-            <button onClick={() => this.getWod()}>Generate</button>
+            <Button variant="contained" onClick={() => this.getWod()}>
+              Generate
+            </Button>
           </Container>
         </React.Fragment>
       </ThemeProvider>
@@ -109,4 +112,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default hot(App);
