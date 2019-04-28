@@ -68,17 +68,6 @@ const wods = [
     workout: ["30 Snatches (135/95 lb)"],
   },
   {
-    title: "More WODs",
-    category: "",
-    how: "",
-    workout: [
-      "Thousands More",
-      "Workouts and",
-      "Daily Inspiration",
-      '(and no more ads)<span class="button">Upgrade</span>',
-    ],
-  },
-  {
     title: "Barbara",
     category: "For Time",
     how: "5 Rounds For Time",
@@ -356,17 +345,6 @@ const wods = [
       "20 Handstand Push-Ups",
       "40 Pull-Ups",
       "60 Pistols (Alternating Legs)",
-    ],
-  },
-  {
-    title: "More WODs",
-    category: "",
-    how: "",
-    workout: [
-      "Thousands More",
-      "Workouts and",
-      "Daily Inspiration",
-      '(and no more ads)<span class="button">Upgrade</span>',
     ],
   },
   {
