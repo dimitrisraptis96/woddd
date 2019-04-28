@@ -5,7 +5,7 @@ import Button from "@material-ui/core/Button";
 
 import theme from "./utils/theme";
 import wods from "./utils/wods";
-
+import RefreshIcon from "./components/Icons/RefreshOutline";
 import logo from "./assets/logo.png";
 
 const GlobalStyle = createGlobalStyle`
@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
       "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
       sans-serif;
+    font-family: 'Rubik', sans-serif;
 
 
     -webkit-font-smoothing: antialiased;
@@ -34,22 +35,62 @@ const Image = styled.img`
   width: 20vmin;
 `;
 
-const Tagline = styled.p`
-  font-family: "Teko", sans-serif;
-  /* font-family: "Proza Libre", sans-serif; */
-  font-size: 2rem;
+const Logo = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
 
+const Hero = styled.h1`
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+`;
+
+const Tagline = styled.p`
+  font-size: 1rem;
+  font-weight: normal;
   text-align: center;
 `;
 
 const Title = styled.h1`
-  font-family: "Teko", sans-serif;
-  /* font-family: "Proza Libre", sans-serif; */
   font-size: 1.5rem;
+  margin-bottom: 0;
+  margin-top: 0;
+`;
 
-  color: red;
+const Category = styled.div`
+  font-size: 0.8rem;
+`;
 
-  text-align: center;
+const Li = styled.li`
+  font-size: 1rem;
+  line-height: 2;
+`;
+
+const StyledButton = styled(Button)`
+  background-color: rgba(0, 98, 90, 1) !important;
+  color: white !important;
+  text-transform: capitalize !important;
+  border-radius: 100rem !important;
+  padding: 1rem 2rem !important;
+  svg {
+    fill: white;
+    margin-right: 0.25rem;
+  }
+`;
+
+const Card = styled.div`
+  background-color: rgba(0, 98, 90, 1);
+  border-radius: 1rem;
+  box-shadow: 0px 5px rgba(0, 98, 90, 0.4), 0px 10px rgba(0, 98, 90, 0.3),
+    0px 15px rgba(0, 98, 90, 0.2), 0px 20px rgba(0, 98, 90, 0.1),
+    0px 25px rgba(0, 98, 90, 0.05);
+
+  padding: 2rem;
+  margin-bottom: ${25 + 16}px;
+  text-align: left;
 `;
 
 const Container = styled.div`
@@ -93,18 +134,34 @@ class App extends Component {
 
   render() {
     const { wod } = this.state;
+
+    const hasWod = wod !== null;
     return (
       <ThemeProvider theme={theme}>
         <React.Fragment>
           <GlobalStyle />
           <Container>
             <Image src={logo} alt="logo" />
-            <Tagline>WOD Generator</Tagline>
-
-            {wod !== null && <Title>{wod.title}</Title>}
-            <Button variant="contained" onClick={() => this.getWod()}>
-              Generate
-            </Button>
+            {hasWod ? (
+              <Card>
+                <Title>{wod.title}</Title>
+                <Category>{wod.category}</Category>
+                <ul>
+                  {wod.workout.map(exercise => (
+                    <Li>{exercise}</Li>
+                  ))}
+                </ul>
+              </Card>
+            ) : (
+              <Logo>
+                <Hero>Woood</Hero>
+                <Tagline>Generate a random Wod and kill it</Tagline>
+              </Logo>
+            )}
+            <StyledButton variant="contained" onClick={() => this.getWod()}>
+              <RefreshIcon width={14} height={14} />
+              {hasWod ? "Generate Again" : "Generate"}
+            </StyledButton>
           </Container>
         </React.Fragment>
       </ThemeProvider>
