@@ -1,4 +1,4 @@
-<h1 align='center'> WOD generator </h1>
+<h1 align='center'> Wood </h1>
 
 <p align='center'>
   <img src='./assets/ouch.png' alt='snatching guy' width='30%'/>
@@ -9,9 +9,10 @@
 </p>
 
 ## 🏃 TODO
-- [ ] Scrape some 🔥 WODs 
+
+- [x] Scrape some 🔥 WODs
+- [x] UI design of the application
 - [ ] Find way to secure the wod data
-- [ ] UI design of the application
 - [ ] Build that 💩
 
 ## 🚧 WIP
