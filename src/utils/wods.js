@@ -1,29 +1,29 @@
 // Fetching command:
-// object.data.wods.map((wod) => ({title: wod.title, category: wod.score_types, how: wod.workout_title, workout: wod.workout}))
+// object.data.wods.map((wod) => ({title: wod.title, type: wod.score_types, how: wod.exercises_title, exercises: wod.exercises}))
 const wods = [
   {
     title: "Fran",
-    category: "For Time",
+    type: "For Time",
     how: "21-15-9 Reps For Time",
-    workout: ["Thrusters (95/65 lb)", "Pull-Ups"],
+    exercises: ["Thrusters (95/65 lb)", "Pull-Ups"],
   },
   {
     title: "Grace",
-    category: "For Time",
+    type: "For Time",
     how: "For Time",
-    workout: ["30 Clean-and-Jerks (135/95 lb)"],
+    exercises: ["30 Clean-and-Jerks (135/95 lb)"],
   },
   {
     title: "Cindy",
-    category: "For Rounds / Reps",
+    type: "For Rounds / Reps",
     how: "AMRAP in 20 minutes",
-    workout: ["5 Pull-Ups", "10 Push-Ups", "15 Air Squats"],
+    exercises: ["5 Pull-Ups", "10 Push-Ups", "15 Air Squats"],
   },
   {
     title: "Christine",
-    category: "For Time",
+    type: "For Time",
     how: "3 Rounds for Time",
-    workout: [
+    exercises: [
       "500 meter Row",
       "12 Deadlifts (Bodyweight)",
       "21 Box Jumps (24/20 in)",
@@ -31,9 +31,9 @@ const wods = [
   },
   {
     title: "Helen",
-    category: "For Time",
+    type: "For Time",
     how: "3 Rounds For Time",
-    workout: [
+    exercises: [
       "400 meter Run",
       "21 Kettlebell Swings (1.5/1 pood)",
       "12 Pull-Ups",
@@ -41,9 +41,9 @@ const wods = [
   },
   {
     title: "Linda",
-    category: "For Time",
+    type: "For Time",
     how: "10-9-8-7-6-5-4-3-2-1 Reps, For Time",
-    workout: [
+    exercises: [
       "Deadlift (1.5 bodyweight)",
       "Bench Press (bodyweight)",
       "Clean (3/4 bodyweight)",
@@ -51,27 +51,31 @@ const wods = [
   },
   {
     title: "Annie",
-    category: "For Time",
+    type: "For Time",
     how: "50-40-30-20-10 Reps For Time",
-    workout: ["Double-Unders", "Sit-Ups"],
+    exercises: ["Double-Unders", "Sit-Ups"],
   },
   {
     title: "Jackie",
-    category: "For Time",
+    type: "For Time",
     how: "For Time",
-    workout: ["1,000 Meter Row", "50 Thrusters (45/35 lb bar)", "30 Pull-Ups"],
+    exercises: [
+      "1,000 Meter Row",
+      "50 Thrusters (45/35 lb bar)",
+      "30 Pull-Ups",
+    ],
   },
   {
     title: "Isabel",
-    category: "For Time",
+    type: "For Time",
     how: "For Time",
-    workout: ["30 Snatches (135/95 lb)"],
+    exercises: ["30 Snatches (135/95 lb)"],
   },
   {
     title: "Barbara",
-    category: "For Time",
+    type: "For Time",
     how: "5 Rounds For Time",
-    workout: [
+    exercises: [
       "20 Pull-Ups",
       "30 Push-Ups",
       "40 Sit-Ups",
@@ -81,45 +85,50 @@ const wods = [
   },
   {
     title: "Diane",
-    category: "For Time",
+    type: "For Time",
     how: "21-15-9 Reps For Time",
-    workout: ["Deadlift (225/155 lb)", "Handstand Push-Ups"],
+    exercises: ["Deadlift (225/155 lb)", "Handstand Push-Ups"],
   },
   {
     title: "Karen",
-    category: "For Time",
+    type: "For Time",
     how: "For Time",
-    workout: ["150 Wall Ball Shots (20/14 lb, 10/9 ft)"],
+    exercises: ["150 Wall Ball Shots (20/14 lb, 10/9 ft)"],
   },
   {
     title: "Nancy",
-    category: "For Time",
+    type: "For Time",
     how: "5 Rounds For Time",
-    workout: ["400 meter Run", "15 Overhead Squats (95/65 lb)"],
+    exercises: ["400 meter Run", "15 Overhead Squats (95/65 lb)"],
   },
   {
     title: "Chelsea",
-    category: "For Rounds / Reps",
+    type: "For Rounds / Reps",
     how: "EMOM in 30 minutes",
-    workout: ["5 Pull-Ups", "10 Push-Ups", "15 Air Squats"],
+    exercises: ["5 Pull-Ups", "10 Push-Ups", "15 Air Squats"],
   },
   {
     title: "Angie",
-    category: "For Time",
+    type: "For Time",
     how: "For Time",
-    workout: ["100 Pull-Ups", "100 Push-Ups", "100 Sit-Ups", "100 Air Squats"],
+    exercises: [
+      "100 Pull-Ups",
+      "100 Push-Ups",
+      "100 Sit-Ups",
+      "100 Air Squats",
+    ],
   },
   {
     title: "Elizabeth",
-    category: "For Time",
+    type: "For Time",
     how: "21-15-9 Reps For Time",
-    workout: ["Squat Cleans (135/95 lb)", "Ring Dips"],
+    exercises: ["Squat Cleans (135/95 lb)", "Ring Dips"],
   },
   {
     title: "Mary",
-    category: "For Rounds / Reps",
+    type: "For Rounds / Reps",
     how: "AMRAP in 20 minutes",
-    workout: [
+    exercises: [
       "5 Handstand Push-Ups",
       "10 Pistols (alternating legs)",
       "15 Pull-Ups",
@@ -127,35 +136,25 @@ const wods = [
   },
   {
     title: "Amanda",
-    category: "For Time",
+    type: "For Time",
     how: "9-7-5 Reps For Time",
-    workout: ["Muscle-Ups", "Squat Snatches (135/95 lbs)"],
+    exercises: ["Muscle-Ups", "Squat Snatches (135/95 lbs)"],
   },
   {
     title: "Nasty Girls",
-    category: "For Time",
+    type: "For Time",
     how: "3 Rounds For Time",
-    workout: [
+    exercises: [
       "50 Air Squats",
       "7 Muscle-Ups",
       "10 Hang Power Cleans (135/95 lb)",
     ],
   },
   {
-    title: "WODs Email",
-    category: "",
-    how: "",
-    workout: [
-      "New Named Workouts",
-      "Emailed to You",
-      'Each Month<span class="button">Get WODs Email</span>',
-    ],
-  },
-  {
     title: "Kelly",
-    category: "For Time",
+    type: "For Time",
     how: "5 Rounds For Time",
-    workout: [
+    exercises: [
       "400 meter Run",
       "30 Box Jumps (24/20 in)",
       "30 Wall Ball Shots (20/14 lb)",
@@ -163,9 +162,9 @@ const wods = [
   },
   {
     title: "Eva",
-    category: "For Time",
+    type: "For Time",
     how: "5 Rounds For Time",
-    workout: [
+    exercises: [
       "800 meter Run",
       "30 Kettlebell Swings (2/1.5 pood)",
       "30 Pull-Ups",
@@ -173,21 +172,21 @@ const wods = [
   },
   {
     title: "Lynne",
-    category: "For Rounds / Reps",
+    type: "For Rounds / Reps",
     how: "5 Rounds for Max Reps",
-    workout: ["Bench Press (bodyweight)", "Pull-Ups"],
+    exercises: ["Bench Press (bodyweight)", "Pull-Ups"],
   },
   {
     title: "Nicole",
-    category: "For Rounds / Reps",
+    type: "For Rounds / Reps",
     how: "AMRAP in 20 minutes",
-    workout: ["400 Meter Run", "Max Pull-Ups"],
+    exercises: ["400 Meter Run", "Max Pull-Ups"],
   },
   {
     title: "Cindy XXX",
-    category: "For Rounds / Reps",
+    type: "For Rounds / Reps",
     how: "AMRAP in 20 minutes",
-    workout: [
+    exercises: [
       "10 Pull-Ups",
       "20 Push-Ups",
       "30 Air Squats",
@@ -207,9 +206,9 @@ const wods = [
   },
   {
     title: "Amanda .45",
-    category: "For Time",
+    type: "For Time",
     how: "13-11-9-7-5 Reps for Time",
-    workout: [
+    exercises: [
       "Muscle-Ups",
       "Squat Snatches (135/95 lb)",
       "",
@@ -218,9 +217,9 @@ const wods = [
   },
   {
     title: "Marguerita",
-    category: "For Time",
+    type: "For Time",
     how: "50 Rounds for Time",
-    workout: [
+    exercises: [
       "1 Burpee",
       "1 Push-Up",
       "1 Jumping-Jack",
@@ -230,49 +229,43 @@ const wods = [
   },
   {
     title: "Heavy Fran",
-    category: "For Time",
+    type: "For Time",
     how: "15-12-9 Reps For Time",
-    workout: ["Thrusters (135/95 lb)", "Weighted Pull-Ups (45/30 lb)"],
+    exercises: ["Thrusters (135/95 lb)", "Weighted Pull-Ups (45/30 lb)"],
   },
   {
     title: "Gwen",
-    category: "For Load",
+    type: "For Load",
     how: "15-12-9 Reps for Load",
-    workout: ["Clean-and-Jerks (unbroken)", "", "Rest as needed between sets"],
-  },
-  {
-    title: "Candy",
-    category: "For Time",
-    how: "5 Rounds for Time",
-    workout: ["20 Pull-Ups", "40 Push-Ups", "60 Air Squats"],
-  },
-  {
-    title: "WODs Sheet",
-    category: "",
-    how: "",
-    workout: [
-      "700+ Benchmarks",
-      "In One Document",
-      'To Save or Print<span class="button">Download PDF</span>',
+    exercises: [
+      "Clean-and-Jerks (unbroken)",
+      "",
+      "Rest as needed between sets",
     ],
   },
   {
-    title: "Frelen",
-    category: "For Time",
+    title: "Candy",
+    type: "For Time",
     how: "5 Rounds for Time",
-    workout: ["800m Run ", "15 Dumbbell Thrusters (45/35 lb)", "15 Pull-Ups"],
+    exercises: ["20 Pull-Ups", "40 Push-Ups", "60 Air Squats"],
+  },
+  {
+    title: "Frelen",
+    type: "For Time",
+    how: "5 Rounds for Time",
+    exercises: ["800m Run ", "15 Dumbbell Thrusters (45/35 lb)", "15 Pull-Ups"],
   },
   {
     title: "Row Cindy Row",
-    category: "For Rounds / Reps",
+    type: "For Rounds / Reps",
     how: "AMRAP in 20 minutes",
-    workout: ["5 Pull-Ups", "10 Push-Ups", "15 Air Squats", "20 calorie Row"],
+    exercises: ["5 Pull-Ups", "10 Push-Ups", "15 Air Squats", "20 calorie Row"],
   },
   {
     title: "Mary XXX",
-    category: "For Rounds / Reps",
+    type: "For Rounds / Reps",
     how: "AMRAP in 20 minutes",
-    workout: [
+    exercises: [
       "10 Handstand Push-Ups",
       "20 Pistols (alternating legs)",
       "30 Pull-Ups",
@@ -292,15 +285,15 @@ const wods = [
   },
   {
     title: "Easy Mary",
-    category: "For Rounds / Reps",
+    type: "For Rounds / Reps",
     how: "AMRAP in 20 minutes",
-    workout: ["5 Handstand Push-Ups", "10 Pull-Ups", "25 Air Squats"],
+    exercises: ["5 Handstand Push-Ups", "10 Pull-Ups", "25 Air Squats"],
   },
   {
     title: "Hard Cindy",
-    category: "For Rounds / Reps",
+    type: "For Rounds / Reps",
     how: "AMRAP in 20 minutes",
-    workout: [
+    exercises: [
       "5 Weighted Pull-Ups (35/25 lb)",
       '10 Incline Push-Ups (feet on 30/24" box)',
       "15 Squats (with 45/35 lb plate)",
@@ -308,9 +301,9 @@ const wods = [
   },
   {
     title: "Nasty Girls v2",
-    category: "For Time",
+    type: "For Time",
     how: "3 Rounds for Time",
-    workout: [
+    exercises: [
       "50 Pistols (alternating legs)",
       "7 Muscle-Ups",
       "10 Hang Power Cleans (175/125 lb)",
@@ -318,30 +311,30 @@ const wods = [
   },
   {
     title: "Karabel",
-    category: "For Time",
+    type: "For Time",
     how: "10 Rounds for Time",
-    workout: [
+    exercises: [
       "3 Power Snatches (135/95 lb)",
       "15 Wall Ball Shots (20/14 lb, 10/9 ft)",
     ],
   },
   {
     title: "Double Grace",
-    category: "For Time",
+    type: "For Time",
     how: "For Time",
-    workout: ["60 Clean-and-Jerks (135/95 lb)"],
+    exercises: ["60 Clean-and-Jerks (135/95 lb)"],
   },
   {
     title: "Fractured Fran",
-    category: "For Time",
+    type: "For Time",
     how: "5 Rounds for Time",
-    workout: ["9 Thrusters (95/65 lb)", "9 Pull-Ups"],
+    exercises: ["9 Thrusters (95/65 lb)", "9 Pull-Ups"],
   },
   {
     title: "Maggie",
-    category: "For Time",
+    type: "For Time",
     how: "5 Rounds for Time",
-    workout: [
+    exercises: [
       "20 Handstand Push-Ups",
       "40 Pull-Ups",
       "60 Pistols (Alternating Legs)",
@@ -349,9 +342,9 @@ const wods = [
   },
   {
     title: "Running Jackie",
-    category: "For Time",
+    type: "For Time",
     how: "For Time",
-    workout: [
+    exercises: [
       "800 meter Run",
       "50 Thrusters (45/35 lb barbell)",
       "30 Pull-Ups",
@@ -359,9 +352,9 @@ const wods = [
   },
   {
     title: "Double Helen",
-    category: "For Time",
+    type: "For Time",
     how: "3 Rounds for Time",
-    workout: [
+    exercises: [
       "800 meter Run",
       "42 Kettlebell Swings (1.5/1 pood)",
       "24 Pull-Ups",
@@ -369,9 +362,9 @@ const wods = [
   },
   {
     title: "Special Mary",
-    category: "For Time",
+    type: "For Time",
     how: "For Time",
-    workout: [
+    exercises: [
       "5 Strict Handstand Push-Ups",
       "10 Pistols",
       "15 Strict Pull-Ups",
@@ -391,9 +384,9 @@ const wods = [
   },
   {
     title: "Time Priority Diane",
-    category: "For Rounds / Reps",
+    type: "For Rounds / Reps",
     how: "Max Reps in 4 minutes 30 seconds",
-    workout: [
+    exercises: [
       "60 seconds of Deadlifts (225/155 lb)",
       "60 seconds of Handstand Push-Ups",
       "45 seconds of Deadlifts (225/155 lb)",
@@ -404,15 +397,20 @@ const wods = [
   },
   {
     title: "Upside-Down Angie",
-    category: "For Time",
+    type: "For Time",
     how: "For Time",
-    workout: ["100 Air Squats", "100 Sit-ups", "100 Push-ups", "100 Pull-ups"],
+    exercises: [
+      "100 Air Squats",
+      "100 Sit-ups",
+      "100 Push-ups",
+      "100 Pull-ups",
+    ],
   },
   {
     title: "Roaming Diane",
-    category: "For Time",
+    type: "For Time",
     how: "21-15-9 Reps for Time",
-    workout: ["Deadlift (225/155 lb)", "Handstand Walk (in meters)"],
+    exercises: ["Deadlift (225/155 lb)", "Handstand Walk (in meters)"],
   },
 ];
 
