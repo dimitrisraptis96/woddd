@@ -1,12 +1,15 @@
 import { hot } from "react-hot-loader/root";
 import React, { Component } from "react";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
-import Button from "@material-ui/core/Button";
+
+import Button from "./components/UI/Button";
+import Card from "./components/UI/Card";
+import Logo from "./components/UI/Logo";
+import Header from "./components/Header/Header";
+import RefreshIcon from "./components/Icons/RefreshOutline";
 
 import theme from "./utils/theme";
-import wods from "./utils/wods";
-import RefreshIcon from "./components/Icons/RefreshOutline";
-import logo from "./assets/logo.png";
+import WODS_LIST from "./utils/wods";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -21,8 +24,8 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    background-color: ${props => props.theme.colors.dark};
-    color: ${props => props.theme.colors.light};
+    background-color: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.white};
   }
 
   code {
@@ -31,71 +34,21 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const Image = styled.img`
-  width: 20vmin;
-`;
-
-const Logo = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
-const Hero = styled.h1`
-  font-size: 3rem;
-  font-weight: bold;
-  text-align: center;
-`;
-
 const Tagline = styled.p`
+  margin: 0;
+  margin-bottom: 2rem;
   font-size: 1rem;
   font-weight: normal;
   text-align: center;
-`;
-
-const Title = styled.h1`
-  font-size: 1.5rem;
-  margin-bottom: 0;
-  margin-top: 0;
-`;
-
-const Category = styled.div`
-  font-size: 0.8rem;
-`;
-
-const Li = styled.li`
-  font-size: 1rem;
-  line-height: 2;
-`;
-
-const StyledButton = styled(Button)`
-  background-color: rgba(0, 98, 90, 1) !important;
-  color: white !important;
-  text-transform: capitalize !important;
-  border-radius: 100rem !important;
-  padding: 1rem 2rem !important;
-  svg {
-    fill: white;
-    margin-right: 0.25rem;
-  }
-`;
-
-const Card = styled.div`
-  background-color: rgba(0, 98, 90, 1);
-  border-radius: 1rem;
-  box-shadow: 0px 5px rgba(0, 98, 90, 0.4), 0px 10px rgba(0, 98, 90, 0.3),
-    0px 15px rgba(0, 98, 90, 0.2), 0px 20px rgba(0, 98, 90, 0.1),
-    0px 25px rgba(0, 98, 90, 0.05);
-
-  padding: 2rem;
-  margin-bottom: ${25 + 16}px;
-  text-align: left;
+  /* color: ${props => props.theme.colors.tertiary}; */
 `;
 
 const Container = styled.div`
   width: 100vw;
-  height: 100vh;
+  box-sizing: border-box;
+
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 
   display: flex;
   flex-direction: column;
@@ -105,9 +58,13 @@ const Container = styled.div`
 
 class App extends Component {
   state = {
-    wods: this.randomize(wods),
+    wods: [],
     wod: null,
   };
+
+  componentDidMount() {
+    this.setState({ wods: this.randomize([...WODS_LIST]) });
+  }
 
   getWod = () => {
     const { wods } = this.state;
@@ -116,8 +73,8 @@ class App extends Component {
     return wod;
   };
 
-  randomize(array) {
-    var l = array.length,
+  randomize = array => {
+    let l = array.length,
       temp,
       index;
     while (l > 0) {
@@ -127,10 +84,13 @@ class App extends Component {
       array[l] = array[index];
       array[index] = temp;
     }
-    console.log(array);
 
     return array;
-  }
+  };
+
+  resetWod = () => {
+    this.setState({ wod: null });
+  };
 
   render() {
     const { wod } = this.state;
@@ -140,28 +100,24 @@ class App extends Component {
       <ThemeProvider theme={theme}>
         <React.Fragment>
           <GlobalStyle />
+          <Header resetWod={this.resetWod} />
           <Container>
-            <Image src={logo} alt="logo" />
             {hasWod ? (
-              <Card>
-                <Title>{wod.title}</Title>
-                <Category>{wod.category}</Category>
-                <ul>
-                  {wod.workout.map(exercise => (
-                    <Li>{exercise}</Li>
-                  ))}
-                </ul>
-              </Card>
+              <Card
+                title={wod.title}
+                type={wod.type}
+                exercises={wod.exercises}
+              />
             ) : (
-              <Logo>
-                <Hero>Woood</Hero>
+              <>
+                <Logo />
                 <Tagline>Generate a random Wod and kill it</Tagline>
-              </Logo>
+              </>
             )}
-            <StyledButton variant="contained" onClick={() => this.getWod()}>
-              <RefreshIcon width={14} height={14} />
+            <Button onClick={this.getWod}>
+              <RefreshIcon width={16} height={16} />
               {hasWod ? "Generate Again" : "Generate"}
-            </StyledButton>
+            </Button>
           </Container>
         </React.Fragment>
       </ThemeProvider>
