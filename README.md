@@ -12,7 +12,7 @@
 
 - [x] Scrape some 🔥 WODs
 - [x] UI design of the application
-- [ ] Find way to secure the wod data
-- [ ] Build that 💩
+- [x] Build that 💩
+- [ ] Find way to secure the wod data (maybe netlify lambdas)
 
 ## 🚧 WIP
