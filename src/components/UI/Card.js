@@ -5,9 +5,11 @@ import styled from "styled-components";
 import { rgba } from "polished";
 
 import DubmbellIcon from "../Icons/Dumbbell";
+import HeartIcon from "../Icons/Heart";
+import HeartOutlineIcon from "../Icons/HeartOutline";
 import theme from "../../utils/theme";
 
-const { secondary, tertiary, white } = theme.colors;
+const { primary, secondary, tertiary, white } = theme.colors;
 
 const Container = styled.div`
   background-color: ${secondary};
@@ -18,6 +20,7 @@ const Container = styled.div`
   padding: 2rem;
   margin-bottom: ${25 + 16}px;
   text-align: left;
+  min-width: 300px;
 `;
 
 const Title = styled.h1`
@@ -29,9 +32,6 @@ const Title = styled.h1`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  svg {
-    fill: ${white};
-  }
 `;
 
 const Type = styled.div`
@@ -61,17 +61,31 @@ const WorkoutLi = styled.li`
   color: ${white};
 `;
 
-const Card = ({ title, type, exercises }) => {
+const How = styled.div`
+  background-color: ${primary};
+  border-radius: 1000rem;
+  padding: 0.25rem;
+  /* margin-bottom: ${25 + 16}px; */
+  text-align: center;
+  color: ${tertiary}
+`;
+
+const Card = ({ title, how, type, exercises, isSaved, saveWod, deleteWod }) => {
   return (
     <Container>
       <Title>
         {title}
-        {/* <HeartIcon width={24} /> */}
+        {isSaved ? (
+          <HeartIcon width={24} fill={tertiary} onClick={deleteWod} />
+        ) : (
+          <HeartOutlineIcon width={24} fill={white} onClick={saveWod} />
+        )}
       </Title>
       <Type>
         <DubmbellIcon width={16} />
         {type}
       </Type>
+      {/* <How>{how}</How> */}
       <WorkoutUl>
         {exercises.map((exercise, index) => (
           <WorkoutLi key={index}>{exercise}</WorkoutLi>
@@ -82,8 +96,17 @@ const Card = ({ title, type, exercises }) => {
 };
 
 Card.propTypes = {
-  title: PropTypes.string,
+  saveWod: PropTypes.func,
+  deleteWod: PropTypes.func,
+  isSaved: PropTypes.bool,
+  title: PropTypes.string.isRequired,
+  how: PropTypes.string,
   type: PropTypes.oneOf(["For Time", "For Rounds / Reps", "For Load"]),
   exercises: PropTypes.arrayOf(PropTypes.string),
 };
+
+Card.defaultProps = {
+  isSaved: false,
+};
+
 export default Card;

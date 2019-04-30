@@ -37,7 +37,7 @@ const Logo = ({ orientation, resetWod }) => {
   return (
     <Container isHorizontal={isHorizontal} onClick={resetWod}>
       <RingIcon color={theme.colors.tertiary} width={width} />
-      <Text isHorizontal={isHorizontal}>Woood</Text>
+      <Text isHorizontal={isHorizontal}>Woddd</Text>
     </Container>
   );
 };

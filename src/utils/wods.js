@@ -6,18 +6,21 @@ const wods = [
     type: "For Time",
     how: "21-15-9 Reps For Time",
     exercises: ["Thrusters (95/65 lb)", "Pull-Ups"],
+    isSaved: false,
   },
   {
     title: "Grace",
     type: "For Time",
     how: "For Time",
     exercises: ["30 Clean-and-Jerks (135/95 lb)"],
+    isSaved: false,
   },
   {
     title: "Cindy",
     type: "For Rounds / Reps",
     how: "AMRAP in 20 minutes",
     exercises: ["5 Pull-Ups", "10 Push-Ups", "15 Air Squats"],
+    isSaved: false,
   },
   {
     title: "Christine",
@@ -28,6 +31,7 @@ const wods = [
       "12 Deadlifts (Bodyweight)",
       "21 Box Jumps (24/20 in)",
     ],
+    isSaved: false,
   },
   {
     title: "Helen",
@@ -38,6 +42,7 @@ const wods = [
       "21 Kettlebell Swings (1.5/1 pood)",
       "12 Pull-Ups",
     ],
+    isSaved: false,
   },
   {
     title: "Linda",
@@ -48,12 +53,14 @@ const wods = [
       "Bench Press (bodyweight)",
       "Clean (3/4 bodyweight)",
     ],
+    isSaved: false,
   },
   {
     title: "Annie",
     type: "For Time",
     how: "50-40-30-20-10 Reps For Time",
     exercises: ["Double-Unders", "Sit-Ups"],
+    isSaved: false,
   },
   {
     title: "Jackie",
@@ -64,12 +71,14 @@ const wods = [
       "50 Thrusters (45/35 lb bar)",
       "30 Pull-Ups",
     ],
+    isSaved: false,
   },
   {
     title: "Isabel",
     type: "For Time",
     how: "For Time",
     exercises: ["30 Snatches (135/95 lb)"],
+    isSaved: false,
   },
   {
     title: "Barbara",
@@ -82,30 +91,35 @@ const wods = [
       "50 Air Squats",
       "3 Minutes Rest",
     ],
+    isSaved: false,
   },
   {
     title: "Diane",
     type: "For Time",
     how: "21-15-9 Reps For Time",
     exercises: ["Deadlift (225/155 lb)", "Handstand Push-Ups"],
+    isSaved: false,
   },
   {
     title: "Karen",
     type: "For Time",
     how: "For Time",
     exercises: ["150 Wall Ball Shots (20/14 lb, 10/9 ft)"],
+    isSaved: false,
   },
   {
     title: "Nancy",
     type: "For Time",
     how: "5 Rounds For Time",
     exercises: ["400 meter Run", "15 Overhead Squats (95/65 lb)"],
+    isSaved: false,
   },
   {
     title: "Chelsea",
     type: "For Rounds / Reps",
     how: "EMOM in 30 minutes",
     exercises: ["5 Pull-Ups", "10 Push-Ups", "15 Air Squats"],
+    isSaved: false,
   },
   {
     title: "Angie",
@@ -117,12 +131,14 @@ const wods = [
       "100 Sit-Ups",
       "100 Air Squats",
     ],
+    isSaved: false,
   },
   {
     title: "Elizabeth",
     type: "For Time",
     how: "21-15-9 Reps For Time",
     exercises: ["Squat Cleans (135/95 lb)", "Ring Dips"],
+    isSaved: false,
   },
   {
     title: "Mary",
@@ -133,12 +149,14 @@ const wods = [
       "10 Pistols (alternating legs)",
       "15 Pull-Ups",
     ],
+    isSaved: false,
   },
   {
     title: "Amanda",
     type: "For Time",
     how: "9-7-5 Reps For Time",
     exercises: ["Muscle-Ups", "Squat Snatches (135/95 lbs)"],
+    isSaved: false,
   },
   {
     title: "Nasty Girls",
@@ -149,6 +167,7 @@ const wods = [
       "7 Muscle-Ups",
       "10 Hang Power Cleans (135/95 lb)",
     ],
+    isSaved: false,
   },
   {
     title: "Kelly",
@@ -159,6 +178,7 @@ const wods = [
       "30 Box Jumps (24/20 in)",
       "30 Wall Ball Shots (20/14 lb)",
     ],
+    isSaved: false,
   },
   {
     title: "Eva",
@@ -169,18 +189,21 @@ const wods = [
       "30 Kettlebell Swings (2/1.5 pood)",
       "30 Pull-Ups",
     ],
+    isSaved: false,
   },
   {
     title: "Lynne",
     type: "For Rounds / Reps",
     how: "5 Rounds for Max Reps",
     exercises: ["Bench Press (bodyweight)", "Pull-Ups"],
+    isSaved: false,
   },
   {
     title: "Nicole",
     type: "For Rounds / Reps",
     how: "AMRAP in 20 minutes",
     exercises: ["400 Meter Run", "Max Pull-Ups"],
+    isSaved: false,
   },
   {
     title: "Cindy XXX",
@@ -203,6 +226,7 @@ const wods = [
       "60 Push-Ups",
       "90 Air Squats",
     ],
+    isSaved: false,
   },
   {
     title: "Amanda .45",
@@ -214,6 +238,7 @@ const wods = [
       "",
       "Time cap: 13 minutes for males, 15 minutes for females",
     ],
+    isSaved: false,
   },
   {
     title: "Marguerita",
@@ -226,12 +251,14 @@ const wods = [
       "1 Sit-Up",
       "1 Handstand",
     ],
+    isSaved: false,
   },
   {
     title: "Heavy Fran",
     type: "For Time",
     how: "15-12-9 Reps For Time",
     exercises: ["Thrusters (135/95 lb)", "Weighted Pull-Ups (45/30 lb)"],
+    isSaved: false,
   },
   {
     title: "Gwen",
@@ -242,24 +269,28 @@ const wods = [
       "",
       "Rest as needed between sets",
     ],
+    isSaved: false,
   },
   {
     title: "Candy",
     type: "For Time",
     how: "5 Rounds for Time",
     exercises: ["20 Pull-Ups", "40 Push-Ups", "60 Air Squats"],
+    isSaved: false,
   },
   {
     title: "Frelen",
     type: "For Time",
     how: "5 Rounds for Time",
     exercises: ["800m Run ", "15 Dumbbell Thrusters (45/35 lb)", "15 Pull-Ups"],
+    isSaved: false,
   },
   {
     title: "Row Cindy Row",
     type: "For Rounds / Reps",
     how: "AMRAP in 20 minutes",
     exercises: ["5 Pull-Ups", "10 Push-Ups", "15 Air Squats", "20 calorie Row"],
+    isSaved: false,
   },
   {
     title: "Mary XXX",
@@ -282,12 +313,14 @@ const wods = [
       "60 Pistols (alternating legs)",
       "90 Pull-Ups",
     ],
+    isSaved: false,
   },
   {
     title: "Easy Mary",
     type: "For Rounds / Reps",
     how: "AMRAP in 20 minutes",
     exercises: ["5 Handstand Push-Ups", "10 Pull-Ups", "25 Air Squats"],
+    isSaved: false,
   },
   {
     title: "Hard Cindy",
@@ -298,6 +331,7 @@ const wods = [
       '10 Incline Push-Ups (feet on 30/24" box)',
       "15 Squats (with 45/35 lb plate)",
     ],
+    isSaved: false,
   },
   {
     title: "Nasty Girls v2",
@@ -308,6 +342,7 @@ const wods = [
       "7 Muscle-Ups",
       "10 Hang Power Cleans (175/125 lb)",
     ],
+    isSaved: false,
   },
   {
     title: "Karabel",
@@ -317,18 +352,21 @@ const wods = [
       "3 Power Snatches (135/95 lb)",
       "15 Wall Ball Shots (20/14 lb, 10/9 ft)",
     ],
+    isSaved: false,
   },
   {
     title: "Double Grace",
     type: "For Time",
     how: "For Time",
     exercises: ["60 Clean-and-Jerks (135/95 lb)"],
+    isSaved: false,
   },
   {
     title: "Fractured Fran",
     type: "For Time",
     how: "5 Rounds for Time",
     exercises: ["9 Thrusters (95/65 lb)", "9 Pull-Ups"],
+    isSaved: false,
   },
   {
     title: "Maggie",
@@ -339,6 +377,7 @@ const wods = [
       "40 Pull-Ups",
       "60 Pistols (Alternating Legs)",
     ],
+    isSaved: false,
   },
   {
     title: "Running Jackie",
@@ -349,6 +388,7 @@ const wods = [
       "50 Thrusters (45/35 lb barbell)",
       "30 Pull-Ups",
     ],
+    isSaved: false,
   },
   {
     title: "Double Helen",
@@ -359,6 +399,7 @@ const wods = [
       "42 Kettlebell Swings (1.5/1 pood)",
       "24 Pull-Ups",
     ],
+    isSaved: false,
   },
   {
     title: "Special Mary",
@@ -381,6 +422,7 @@ const wods = [
       "10 Pistols",
       "15 Strict Pull-Ups",
     ],
+    isSaved: false,
   },
   {
     title: "Time Priority Diane",
@@ -394,6 +436,7 @@ const wods = [
       "30 seconds of Deadlifts (225/155 lb)",
       "30 seconds of Handstand Push-Ups",
     ],
+    isSaved: false,
   },
   {
     title: "Upside-Down Angie",
@@ -405,12 +448,14 @@ const wods = [
       "100 Push-ups",
       "100 Pull-ups",
     ],
+    isSaved: false,
   },
   {
     title: "Roaming Diane",
     type: "For Time",
     how: "21-15-9 Reps for Time",
     exercises: ["Deadlift (225/155 lb)", "Handstand Walk (in meters)"],
+    isSaved: false,
   },
 ];
 

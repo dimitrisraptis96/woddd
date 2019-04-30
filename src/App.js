@@ -92,6 +92,18 @@ class App extends Component {
     this.setState({ wod: null });
   };
 
+  saveWod = id => {
+    const { wod } = this.state;
+    wod.isSaved = true;
+    this.setState(wod);
+  };
+
+  deleteWod = id => {
+    const { wod } = this.state;
+    wod.isSaved = false;
+    this.setState(wod);
+  };
+
   render() {
     const { wod } = this.state;
 
@@ -106,7 +118,11 @@ class App extends Component {
               <Card
                 title={wod.title}
                 type={wod.type}
+                how={wod.how}
                 exercises={wod.exercises}
+                isSaved={wod.isSaved}
+                saveWod={this.saveWod}
+                deleteWod={this.deleteWod}
               />
             ) : (
               <>
