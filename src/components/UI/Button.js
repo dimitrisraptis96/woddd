@@ -15,6 +15,8 @@ const StyledButton = styled(Button)`
   svg {
     fill: ${theme.colors.primary};
     margin-right: 0.25rem;
+    width: 16px;
+    height: 16px;
   }
 `;
 
