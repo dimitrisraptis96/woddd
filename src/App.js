@@ -118,7 +118,7 @@ class App extends Component {
   render() {
     const { wod } = this.state;
     const { user, signOut, signInWithFacebook } = this.props;
-    console.log(this.props);
+    console.log(process.env.REACT_APP_FIREBASE_API_KEY);
 
     const hasWod = wod !== null;
     return (

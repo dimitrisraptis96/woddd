@@ -1,8 +1,8 @@
 export const firebaseConfig = {
-  apiKey: "AIzaSyA-8xd4ZEN60qna_O0hQDAHApIa4KfgkwU",
-  authDomain: "woddd-735cc.firebaseapp.com",
-  databaseURL: "https://woddd-735cc.firebaseio.com",
-  projectId: "woddd-735cc",
-  storageBucket: "woddd-735cc.appspot.com",
-  messagingSenderId: "81108781337",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
 };
