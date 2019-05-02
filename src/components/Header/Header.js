@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 import Logo from "../UI/Logo";
 import CloseIcon from "../Icons/CloseOutline";
@@ -53,7 +54,9 @@ class Header extends React.Component {
     const { isOpen } = this.state;
     return (
       <Container>
-        <Logo orientation="horizontal" resetWod={resetWod} />
+        <Link to="/">
+          <Logo orientation="horizontal" />
+        </Link>
         {isOpen ? (
           <IconGroup>
             <InfoIcon width={24} height={24} fill={theme.colors.tertiary} />
