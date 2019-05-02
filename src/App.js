@@ -2,6 +2,11 @@ import { hot } from "react-hot-loader/root";
 import React, { Component } from "react";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 
+import withFirebaseAuth from "react-with-firebase-auth";
+import * as firebase from "firebase/app";
+import "firebase/auth";
+import { firebaseConfig } from "./utils/config";
+
 import Button from "./components/UI/Button";
 import Card from "./components/UI/Card";
 import Logo from "./components/UI/Logo";
@@ -10,6 +15,12 @@ import RefreshIcon from "./components/Icons/RefreshOutline";
 
 import theme from "./utils/theme";
 import WODS_LIST from "./utils/wods";
+
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+const firebaseAppAuth = firebaseApp.auth();
+const providers = {
+  facebookProvider: new firebase.auth.FacebookAuthProvider(),
+};
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -106,6 +117,8 @@ class App extends Component {
 
   render() {
     const { wod } = this.state;
+    const { user, signOut, signInWithFacebook } = this.props;
+    console.log(this.props);
 
     const hasWod = wod !== null;
     return (
@@ -114,6 +127,14 @@ class App extends Component {
           <GlobalStyle />
           <Header resetWod={this.resetWod} />
           <Container>
+            {user ? <p>Hello, {user.displayName}</p> : <p>Please sign in.</p>}
+            {user ? (
+              <Button onClick={signOut}>Sign out</Button>
+            ) : (
+              <Button onClick={signInWithFacebook}>
+                Sign in with Facebook
+              </Button>
+            )}
             {hasWod ? (
               <Card
                 title={wod.title}
@@ -141,4 +162,7 @@ class App extends Component {
   }
 }
 
-export default hot(App);
+export default withFirebaseAuth({
+  providers,
+  firebaseAppAuth,
+})(hot(App));
