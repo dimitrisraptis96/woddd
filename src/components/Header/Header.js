@@ -3,10 +3,10 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 import Logo from "../UI/Logo";
-import CloseIcon from "../Icons/CloseOutline";
-import InfoIcon from "../Icons/InfoOutline";
-import HeartOutlineIcon from "../Icons/HeartOutline";
-import MenuIcon from "../Icons/MenuOutline";
+import CloseIcon from "../UI/Icons/CloseOutline";
+import InfoIcon from "../UI/Icons/InfoOutline";
+import HeartOutlineIcon from "../UI/Icons/HeartOutline";
+import MenuIcon from "../UI/Icons/MenuOutline";
 
 import theme from "../../utils/theme";
 

@@ -1,14 +1,19 @@
 import { hot } from "react-hot-loader/root";
-import React, { Component } from "react";
+import React from "react";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
-import { Route } from "react-router";
+import { Route, Switch } from "react-router";
 
-import Dashboard from "./components/Body/Dashboard/Dashboard";
-import Login from "./components/Body/Login/Login";
+import withFirebaseAuth from "react-with-firebase-auth";
+import { firebaseAppAuth, providers } from "./utils/firebase";
+
+import PrivateRoute from "./components/PrivateRoute";
+import Dashboard from "./containers/DashboardContainer";
+import Login from "./components/Login/Login";
 import Wod from "./components/Body/Wod/Wod";
 
 import Header from "./components/Header/Header";
 import Body from "./components/Body/Body";
+import Page404 from "./components/Page404";
 
 import theme from "./utils/theme";
 
@@ -35,17 +40,57 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-class App extends Component {
+class App extends React.Component {
+  state = {
+    user: JSON.parse(localStorage.getItem("user")),
+  };
+
+  componentDidMount() {
+    // firebaseAppAuth.onAuthStateChanged(user => user && this.setState({ user }));
+    firebaseAppAuth.onAuthStateChanged(user => {
+      if (user) {
+        localStorage.setItem("user", JSON.stringify(user));
+        this.setState({ user });
+      } else {
+        localStorage.removeItem("user");
+        this.setState({ user: null });
+      }
+    });
+  }
+
   render() {
+    const { user } = this.state;
+    const { signInWithFacebook, signOut } = this.props;
+
     return (
       <ThemeProvider theme={theme}>
         <React.Fragment>
           <GlobalStyle />
           <Header />
           <Body>
-            <Route exact path="/" component={Dashboard} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/wod/:id" component={Wod} />
+            <Switch>
+              <PrivateRoute
+                exact
+                path="/"
+                component={Dashboard}
+                user={user}
+                signOut={signOut}
+              />
+              <PrivateRoute
+                exact
+                path="/wod"
+                component={Wod}
+                user={user}
+                signOut={signOut}
+              />
+              <Route
+                path="/login"
+                render={props => (
+                  <Login {...props} signInWithFacebook={signInWithFacebook} />
+                )}
+              />
+              <Route component={Page404} />
+            </Switch>
           </Body>
         </React.Fragment>
       </ThemeProvider>
@@ -53,4 +98,7 @@ class App extends Component {
   }
 }
 
-export default hot(App);
+export default withFirebaseAuth({
+  providers,
+  firebaseAppAuth,
+})(hot(App));

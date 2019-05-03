@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { rgba } from "polished";
 
-import DubmbellIcon from "../Icons/Dumbbell";
-import HeartIcon from "../Icons/Heart";
-import HeartOutlineIcon from "../Icons/HeartOutline";
+import DubmbellIcon from "./Icons/Dumbbell";
+import HeartIcon from "./Icons/Heart";
+import HeartOutlineIcon from "./Icons/HeartOutline";
 import theme from "../../utils/theme";
 
 const { primary, secondary, tertiary, white } = theme.colors;
