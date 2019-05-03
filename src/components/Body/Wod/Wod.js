@@ -5,7 +5,7 @@ import Card from "../../UI/Card";
 import RefreshIcon from "../../UI/Icons/RefreshOutline";
 
 const Wod = props => {
-  const { wod, save, remove, generate } = props.location.state;
+  const { wod, save, remove, generate } = props;
 
   return (
     <React.Fragment>
@@ -18,9 +18,7 @@ const Wod = props => {
         // saveWod={save}
         // deleteWod={remove}
       />
-      <Button
-      // onClick={generate}
-      >
+      <Button onClick={generate}>
         <RefreshIcon />
         Generate Again
       </Button>
