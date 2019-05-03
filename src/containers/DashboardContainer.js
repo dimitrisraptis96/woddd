@@ -41,17 +41,12 @@ class DashboardContainer extends Component {
     this.setState(wod);
   };
 
-  getWod = () => {
-    const { wods } = this.state;
-    const wod = wods[0];
-    this.setState({ wods: wods.slice(1), wod });
+  generate = () => {
+    this.props.history.push("/wod");
+  };
 
-    this.props.history.push(`/wod`, {
-      wod,
-      // save: this.saveWod,
-      // remove: this.deleteWod,
-      // generete: this.getWod,
-    });
+  getRandomInt = max => {
+    return Math.floor(Math.random() * Math.floor(max));
   };
 
   shuffle = array => {
@@ -69,22 +64,9 @@ class DashboardContainer extends Component {
     return array;
   };
 
-  logout = () => {
-    this.props
-      .signOut()
-      .then(res => this.props.history.push("/login"))
-      .catch(err => console.log("logout fail"));
-  };
-
   render() {
     const { isFetched } = this.state;
-    return (
-      <Dashboard
-        getWod={this.getWod}
-        isFetched={isFetched}
-        logout={this.logout}
-      />
-    );
+    return <Dashboard generate={this.generate} isFetched={isFetched} />;
   }
 }
 
