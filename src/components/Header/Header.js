@@ -7,6 +7,7 @@ import CloseIcon from "../UI/Icons/CloseOutline";
 import InfoIcon from "../UI/Icons/InfoOutline";
 import HeartOutlineIcon from "../UI/Icons/HeartOutline";
 import MenuIcon from "../UI/Icons/MenuOutline";
+import SignOutIcon from "../UI/Icons/SignOutAlt";
 
 import theme from "../../utils/theme";
 
@@ -50,7 +51,7 @@ class Header extends React.Component {
   };
 
   render() {
-    const { resetWod } = this.props;
+    const { resetWod, logout } = this.props;
     const { isOpen } = this.state;
     return (
       <Container>
@@ -64,6 +65,12 @@ class Header extends React.Component {
               width={24}
               height={24}
               fill={theme.colors.tertiary}
+            />
+            <SignOutIcon
+              width={24}
+              height={24}
+              fill={theme.colors.tertiary}
+              onClick={logout}
             />
             <CloseIcon
               width={32}

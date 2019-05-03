@@ -1,15 +1,15 @@
 import { hot } from "react-hot-loader/root";
 import React from "react";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
-import { Route, Switch } from "react-router";
+import { Route, Switch, withRouter } from "react-router";
 
 import withFirebaseAuth from "react-with-firebase-auth";
 import { firebaseAppAuth, providers } from "./utils/firebase";
 
 import PrivateRoute from "./components/PrivateRoute";
 import Dashboard from "./containers/DashboardContainer";
-import Login from "./components/Login/Login";
-import Wod from "./components/Body/Wod/Wod";
+import Login from "./containers/LoginContainer";
+import Wod from "./containers/WodContainer";
 
 import Header from "./components/Header/Header";
 import Body from "./components/Body/Body";
@@ -46,7 +46,6 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    // firebaseAppAuth.onAuthStateChanged(user => user && this.setState({ user }));
     firebaseAppAuth.onAuthStateChanged(user => {
       if (user) {
         localStorage.setItem("user", JSON.stringify(user));
@@ -58,31 +57,26 @@ class App extends React.Component {
     });
   }
 
+  logout = () => {
+    this.props
+      .signOut()
+      .then(res => this.props.history.push("/login"))
+      .catch(err => console.log(err));
+  };
+
   render() {
     const { user } = this.state;
-    const { signInWithFacebook, signOut } = this.props;
+    const { signInWithFacebook } = this.props;
 
     return (
       <ThemeProvider theme={theme}>
         <React.Fragment>
           <GlobalStyle />
-          <Header />
+          <Header logout={this.logout} />
           <Body>
             <Switch>
-              <PrivateRoute
-                exact
-                path="/"
-                component={Dashboard}
-                user={user}
-                signOut={signOut}
-              />
-              <PrivateRoute
-                exact
-                path="/wod"
-                component={Wod}
-                user={user}
-                signOut={signOut}
-              />
+              <PrivateRoute exact path="/" component={Dashboard} user={user} />
+              <PrivateRoute exact path="/wod" component={Wod} user={user} />
               <Route
                 path="/login"
                 render={props => (
@@ -101,4 +95,4 @@ class App extends React.Component {
 export default withFirebaseAuth({
   providers,
   firebaseAppAuth,
-})(hot(App));
+})(withRouter(hot(App)));
