@@ -2,13 +2,13 @@ import React from "react";
 import { database } from "../utils/firebase";
 
 import Wod from "../components/Body/Wod/Wod";
+import Spinner from "../components/UI/Spinner";
 
 class WodContainer extends React.Component {
   state = {
     wod: null,
     likes: [],
-    isLoading: false,
-    isReady: false,
+    isFetching: true,
   };
 
   componentDidMount() {
@@ -20,7 +20,7 @@ class WodContainer extends React.Component {
     const { user } = this.props;
     const userId = user.uid;
 
-    this.setState({ isLoading: true });
+    this.setState({ isFetching: true });
 
     database
       .ref("/users/" + userId)
@@ -29,7 +29,10 @@ class WodContainer extends React.Component {
         const profile = snapshot.val();
         if (profile !== null && profile.hasOwnProperty("likes")) {
           const likes = profile.likes;
-          this.setState({ likes });
+          this.setState({
+            likes,
+            isFetching: false,
+          });
         } else {
           // create likes entity
           database
@@ -42,14 +45,15 @@ class WodContainer extends React.Component {
       });
   };
   getMaxWods = () => {
+    this.setState({ isFetching: true });
+
     database
       .ref("/wods/")
       .once("value")
       .then(snapshot => {
         const wods = snapshot.val();
-        const max = wods.length;
 
-        this.setState({ wods }, this.generate);
+        this.setState({ wods, isFetching: false }, this.generate);
       });
   };
 
@@ -72,7 +76,7 @@ class WodContainer extends React.Component {
 
   removeWod = wodId => {
     const { likes } = this.state;
-    const { user } = this.props;
+    const { user } = this.prps;
     const userId = user.uid;
 
     const removeIndex = likes.findIndex(likeId => likeId === wodId);
@@ -111,11 +115,10 @@ class WodContainer extends React.Component {
   };
 
   render() {
-    const { wod, likes } = this.state;
-    if (wod === null) return <div>Loading</div>;
+    const { wod, likes, isFetching } = this.state;
+    if (isFetching || wod === null) return <Spinner />;
 
     const isLiked = likes.some(likeId => likeId === wod.id);
-    // const isLiked = true;
 
     return (
       <Wod
