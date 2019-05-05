@@ -8,11 +8,15 @@
   Generate a random WOD and kill it!
 </p>
 
-## 🏃 TODO
+## 🔥 App
 
-- [x] Scrape some 🔥 WODs
-- [x] UI design of the application
-- [x] Build that 💩
-- [ ] Find way to secure the wod data (maybe netlify lambdas)
+Check the live app [here](https://woddd.netlify.com).
+
+## 🏃 To-do
+
+- [ ] About & Favorites page design
+- [ ] Find way to handle favorites Wods
+- [ ] Add Guest support
+- [ ] Footer
 
 ## 🚧 WIP

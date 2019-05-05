@@ -87,7 +87,7 @@ class WodContainer extends React.Component {
 
   removeWod = wodId => {
     const { likes } = this.state;
-    const { user } = this.prps;
+    const { user } = this.props;
     const userId = user.uid;
 
     const removeIndex = likes.findIndex(likeId => likeId === wodId);
