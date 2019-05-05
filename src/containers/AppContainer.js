@@ -4,18 +4,22 @@ import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { Route, Switch, withRouter } from "react-router";
 
 import withFirebaseAuth from "react-with-firebase-auth";
-import { firebaseAppAuth, providers } from "./utils/firebase";
+import { firebaseAppAuth, providers, database } from "../utils/firebase";
 
-import PrivateRoute from "./components/PrivateRoute";
-import Dashboard from "./containers/DashboardContainer";
-import Login from "./containers/LoginContainer";
-import Wod from "./containers/WodContainer";
+import PrivateRoute from "../components/PrivateRoute";
+import Dashboard from "./DashboardContainer";
+import Favorites from "./FavoritesContainer";
+import Login from "./LoginContainer";
+import Wod from "./WodContainer";
 
-import Header from "./components/Header/Header";
-import Body from "./components/Body/Body";
-import Page404 from "./components/Page404";
+import Header from "../components/Header/Header";
+import Body from "../components/Body/Body";
+import Page404 from "../components/Page404";
 
-import theme from "./utils/theme";
+import theme from "../utils/theme";
+
+import WODS from "../utils/wods";
+import uuid from "uuid";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -76,6 +80,12 @@ class App extends React.Component {
           <Body>
             <Switch>
               <PrivateRoute exact path="/" component={Dashboard} user={user} />
+              <PrivateRoute
+                exact
+                path="/favorites"
+                component={Favorites}
+                user={user}
+              />
               <PrivateRoute exact path="/wod" component={Wod} user={user} />
               <Route
                 path="/login"

@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import App from "./App";
+import App from "./containers/AppContainer";
 import * as serviceWorker from "./serviceWorker";
 
 import { Router } from "react-router";
