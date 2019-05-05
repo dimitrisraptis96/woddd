@@ -1,466 +1,493 @@
-[
-  {
-    "title": "Fran",
-    "type": "For Time",
-    "how": "21-15-9 Reps For Time",
-    "exercises": ["Thrusters (95/65 lb)", "Pull-Ups"],
-    "isSaved": false
-  },
-  {
-    "title": "Grace",
-    "type": "For Time",
-    "how": "For Time",
-    "exercises": ["30 Clean-and-Jerks (135/95 lb)"],
-    "isSaved": false
-  },
-  {
-    "title": "Cindy",
-    "type": "For Rounds / Reps",
-    "how": "AMRAP in 20 minutes",
-    "exercises": ["5 Pull-Ups", "10 Push-Ups", "15 Air Squats"],
-    "isSaved": false
-  },
-  {
-    "title": "Christine",
-    "type": "For Time",
-    "how": "3 Rounds for Time",
-    "exercises": [
-      "500 meter Row",
-      "12 Deadlifts (Bodyweight)",
-      "21 Box Jumps (24/20 in)"
-    ],
-    "isSaved": false
-  },
-  {
-    "title": "Helen",
-    "type": "For Time",
-    "how": "3 Rounds For Time",
-    "exercises": [
-      "400 meter Run",
-      "21 Kettlebell Swings (1.5/1 pood)",
-      "12 Pull-Ups"
-    ],
-    "isSaved": false
-  },
-  {
-    "title": "Linda",
-    "type": "For Time",
-    "how": "10-9-8-7-6-5-4-3-2-1 Reps, For Time",
-    "exercises": [
-      "Deadlift (1.5 bodyweight)",
-      "Bench Press (bodyweight)",
-      "Clean (3/4 bodyweight)"
-    ],
-    "isSaved": false
-  },
-  {
-    "title": "Annie",
-    "type": "For Time",
-    "how": "50-40-30-20-10 Reps For Time",
-    "exercises": ["Double-Unders", "Sit-Ups"],
-    "isSaved": false
-  },
-  {
-    "title": "Jackie",
-    "type": "For Time",
-    "how": "For Time",
-    "exercises": [
-      "1,000 Meter Row",
-      "50 Thrusters (45/35 lb bar)",
-      "30 Pull-Ups"
-    ],
-    "isSaved": false
-  },
-  {
-    "title": "Isabel",
-    "type": "For Time",
-    "how": "For Time",
-    "exercises": ["30 Snatches (135/95 lb)"],
-    "isSaved": false
-  },
-  {
-    "title": "Barbara",
-    "type": "For Time",
-    "how": "5 Rounds For Time",
-    "exercises": [
-      "20 Pull-Ups",
-      "30 Push-Ups",
-      "40 Sit-Ups",
-      "50 Air Squats",
-      "3 Minutes Rest"
-    ],
-    "isSaved": false
-  },
-  {
-    "title": "Diane",
-    "type": "For Time",
-    "how": "21-15-9 Reps For Time",
-    "exercises": ["Deadlift (225/155 lb)", "Handstand Push-Ups"],
-    "isSaved": false
-  },
-  {
-    "title": "Karen",
-    "type": "For Time",
-    "how": "For Time",
-    "exercises": ["150 Wall Ball Shots (20/14 lb, 10/9 ft)"],
-    "isSaved": false
-  },
-  {
-    "title": "Nancy",
-    "type": "For Time",
-    "how": "5 Rounds For Time",
-    "exercises": ["400 meter Run", "15 Overhead Squats (95/65 lb)"],
-    "isSaved": false
-  },
-  {
-    "title": "Chelsea",
-    "type": "For Rounds / Reps",
-    "how": "EMOM in 30 minutes",
-    "exercises": ["5 Pull-Ups", "10 Push-Ups", "15 Air Squats"],
-    "isSaved": false
-  },
-  {
-    "title": "Angie",
-    "type": "For Time",
-    "how": "For Time",
-    "exercises": [
-      "100 Pull-Ups",
-      "100 Push-Ups",
-      "100 Sit-Ups",
-      "100 Air Squats"
-    ],
-    "isSaved": false
-  },
-  {
-    "title": "Elizabeth",
-    "type": "For Time",
-    "how": "21-15-9 Reps For Time",
-    "exercises": ["Squat Cleans (135/95 lb)", "Ring Dips"],
-    "isSaved": false
-  },
-  {
-    "title": "Mary",
-    "type": "For Rounds / Reps",
-    "how": "AMRAP in 20 minutes",
-    "exercises": [
-      "5 Handstand Push-Ups",
-      "10 Pistols (alternating legs)",
-      "15 Pull-Ups"
-    ],
-    "isSaved": false
-  },
-  {
-    "title": "Amanda",
-    "type": "For Time",
-    "how": "9-7-5 Reps For Time",
-    "exercises": ["Muscle-Ups", "Squat Snatches (135/95 lbs)"],
-    "isSaved": false
-  },
-  {
-    "title": "Nasty Girls",
-    "type": "For Time",
-    "how": "3 Rounds For Time",
-    "exercises": [
-      "50 Air Squats",
-      "7 Muscle-Ups",
-      "10 Hang Power Cleans (135/95 lb)"
-    ],
-    "isSaved": false
-  },
-  {
-    "title": "Kelly",
-    "type": "For Time",
-    "how": "5 Rounds For Time",
-    "exercises": [
-      "400 meter Run",
-      "30 Box Jumps (24/20 in)",
-      "30 Wall Ball Shots (20/14 lb)"
-    ],
-    "isSaved": false
-  },
-  {
-    "title": "Eva",
-    "type": "For Time",
-    "how": "5 Rounds For Time",
-    "exercises": [
-      "800 meter Run",
-      "30 Kettlebell Swings (2/1.5 pood)",
-      "30 Pull-Ups"
-    ],
-    "isSaved": false
-  },
-  {
-    "title": "Lynne",
-    "type": "For Rounds / Reps",
-    "how": "5 Rounds for Max Reps",
-    "exercises": ["Bench Press (bodyweight)", "Pull-Ups"],
-    "isSaved": false
-  },
-  {
-    "title": "Nicole",
-    "type": "For Rounds / Reps",
-    "how": "AMRAP in 20 minutes",
-    "exercises": ["400 Meter Run", "Max Pull-Ups"],
-    "isSaved": false
-  },
-  {
-    "title": "Cindy XXX",
-    "type": "For Rounds / Reps",
-    "how": "AMRAP in 20 minutes",
-    "exercises": [
-      "10 Pull-Ups",
-      "20 Push-Ups",
-      "30 Air Squats",
-      "15 Pull-Ups",
-      "30 Push-Ups",
-      "45 Air Squats",
-      "20 Pull-Ups",
-      "40 Push-Ups",
-      "60 Air Squats",
-      "25 Pull-Ups",
-      "50 Push-Ups",
-      "75 Air Squats",
-      "30 Pull-Ups",
-      "60 Push-Ups",
-      "90 Air Squats"
-    ],
-    "isSaved": false
-  },
-  {
-    "title": "Amanda .45",
-    "type": "For Time",
-    "how": "13-11-9-7-5 Reps for Time",
-    "exercises": [
-      "Muscle-Ups",
-      "Squat Snatches (135/95 lb)",
-      "",
-      "Time cap: 13 minutes for males, 15 minutes for females"
-    ],
-    "isSaved": false
-  },
-  {
-    "title": "Marguerita",
-    "type": "For Time",
-    "how": "50 Rounds for Time",
-    "exercises": [
-      "1 Burpee",
-      "1 Push-Up",
-      "1 Jumping-Jack",
-      "1 Sit-Up",
-      "1 Handstand"
-    ],
-    "isSaved": false
-  },
-  {
-    "title": "Heavy Fran",
-    "type": "For Time",
-    "how": "15-12-9 Reps For Time",
-    "exercises": ["Thrusters (135/95 lb)", "Weighted Pull-Ups (45/30 lb)"],
-    "isSaved": false
-  },
-  {
-    "title": "Gwen",
-    "type": "For Load",
-    "how": "15-12-9 Reps for Load",
-    "exercises": [
-      "Clean-and-Jerks (unbroken)",
-      "",
-      "Rest as needed between sets"
-    ],
-    "isSaved": false
-  },
-  {
-    "title": "Candy",
-    "type": "For Time",
-    "how": "5 Rounds for Time",
-    "exercises": ["20 Pull-Ups", "40 Push-Ups", "60 Air Squats"],
-    "isSaved": false
-  },
-  {
-    "title": "Frelen",
-    "type": "For Time",
-    "how": "5 Rounds for Time",
-    "exercises": [
-      "800m Run ",
-      "15 Dumbbell Thrusters (45/35 lb)",
-      "15 Pull-Ups"
-    ],
-    "isSaved": false
-  },
-  {
-    "title": "Row Cindy Row",
-    "type": "For Rounds / Reps",
-    "how": "AMRAP in 20 minutes",
-    "exercises": [
-      "5 Pull-Ups",
-      "10 Push-Ups",
-      "15 Air Squats",
-      "20 calorie Row"
-    ],
-    "isSaved": false
-  },
-  {
-    "title": "Mary XXX",
-    "type": "For Rounds / Reps",
-    "how": "AMRAP in 20 minutes",
-    "exercises": [
-      "10 Handstand Push-Ups",
-      "20 Pistols (alternating legs)",
-      "30 Pull-Ups",
-      "15 Handstand Push-Ups",
-      "30 Pistols (alternating legs)",
-      "45 Pull-Ups",
-      "20 Handstand Push-Ups",
-      "40 Pistols (alternating legs)",
-      "60 Pull-Ups",
-      "25 Handstand Push-Ups",
-      "50 Pistols (alternating legs)",
-      "75 Pull-Ups",
-      "30 Handstand Push-Ups",
-      "60 Pistols (alternating legs)",
-      "90 Pull-Ups"
-    ],
-    "isSaved": false
-  },
-  {
-    "title": "Easy Mary",
-    "type": "For Rounds / Reps",
-    "how": "AMRAP in 20 minutes",
-    "exercises": ["5 Handstand Push-Ups", "10 Pull-Ups", "25 Air Squats"],
-    "isSaved": false
-  },
-  {
-    "title": "Hard Cindy",
-    "type": "For Rounds / Reps",
-    "how": "AMRAP in 20 minutes",
-    "exercises": [
-      "5 Weighted Pull-Ups (35/25 lb)",
-      "10 Incline Push-Ups (feet on 30/24\" box)",
-      "15 Squats (with 45/35 lb plate)"
-    ],
-    "isSaved": false
-  },
-  {
-    "title": "Nasty Girls v2",
-    "type": "For Time",
-    "how": "3 Rounds for Time",
-    "exercises": [
-      "50 Pistols (alternating legs)",
-      "7 Muscle-Ups",
-      "10 Hang Power Cleans (175/125 lb)"
-    ],
-    "isSaved": false
-  },
-  {
-    "title": "Karabel",
-    "type": "For Time",
-    "how": "10 Rounds for Time",
-    "exercises": [
-      "3 Power Snatches (135/95 lb)",
-      "15 Wall Ball Shots (20/14 lb, 10/9 ft)"
-    ],
-    "isSaved": false
-  },
-  {
-    "title": "Double Grace",
-    "type": "For Time",
-    "how": "For Time",
-    "exercises": ["60 Clean-and-Jerks (135/95 lb)"],
-    "isSaved": false
-  },
-  {
-    "title": "Fractured Fran",
-    "type": "For Time",
-    "how": "5 Rounds for Time",
-    "exercises": ["9 Thrusters (95/65 lb)", "9 Pull-Ups"],
-    "isSaved": false
-  },
-  {
-    "title": "Maggie",
-    "type": "For Time",
-    "how": "5 Rounds for Time",
-    "exercises": [
-      "20 Handstand Push-Ups",
-      "40 Pull-Ups",
-      "60 Pistols (Alternating Legs)"
-    ],
-    "isSaved": false
-  },
-  {
-    "title": "Running Jackie",
-    "type": "For Time",
-    "how": "For Time",
-    "exercises": [
-      "800 meter Run",
-      "50 Thrusters (45/35 lb barbell)",
-      "30 Pull-Ups"
-    ],
-    "isSaved": false
-  },
-  {
-    "title": "Double Helen",
-    "type": "For Time",
-    "how": "3 Rounds for Time",
-    "exercises": [
-      "800 meter Run",
-      "42 Kettlebell Swings (1.5/1 pood)",
-      "24 Pull-Ups"
-    ],
-    "isSaved": false
-  },
-  {
-    "title": "Special Mary",
-    "type": "For Time",
-    "how": "For Time",
-    "exercises": [
-      "5 Strict Handstand Push-Ups",
-      "10 Pistols",
-      "15 Strict Pull-Ups",
-      "10 Strict Handstand Push-Ups",
-      "20 Pistols",
-      "30 Strict Pull-Ups",
-      "15 Strict Handstand Push-Ups",
-      "30 Pistols",
-      "45 Strict Pull-Ups",
-      "10 Strict Handstand Push-Ups",
-      "20 Pistols",
-      "30 Strict Pull-Ups",
-      "5 Strict Handstand Push-Ups",
-      "10 Pistols",
-      "15 Strict Pull-Ups"
-    ],
-    "isSaved": false
-  },
-  {
-    "title": "Time Priority Diane",
-    "type": "For Rounds / Reps",
-    "how": "Max Reps in 4 minutes 30 seconds",
-    "exercises": [
-      "60 seconds of Deadlifts (225/155 lb)",
-      "60 seconds of Handstand Push-Ups",
-      "45 seconds of Deadlifts (225/155 lb)",
-      "45 seconds of Handstand Push-Ups",
-      "30 seconds of Deadlifts (225/155 lb)",
-      "30 seconds of Handstand Push-Ups"
-    ],
-    "isSaved": false
-  },
-  {
-    "type": "For Time",
-    "how": "For Time",
-    "exercises": [
-      "100 Air Squats",
-      "100 Sit-ups",
-      "100 Push-ups",
-      "100 Pull-ups"
-    ],
-    "isSaved": false
-  },
-  {
-    "title": "Roaming Diane",
-    "type": "For Time",
-    "how": "21-15-9 Reps for Time",
-    "exercises": ["Deadlift (225/155 lb)", "Handstand Walk (in meters)"],
-    "isSaved": false
-  }
-]
+{
+  "wods": [
+    {
+      "exercises": ["Thrusters (95/65 lb)", "Pull-Ups"],
+      "how": "21-15-9 Reps For Time",
+      "isSaved": false,
+      "title": "Fran",
+      "type": "For Time",
+      "id": "Fran-4f00e54d-39bf-42ac-baa7-7a04a34c0074"
+    },
+    {
+      "exercises": ["30 Clean-and-Jerks (135/95 lb)"],
+      "how": "For Time",
+      "isSaved": false,
+      "title": "Grace",
+      "type": "For Time",
+      "id": "Grace-f2bea867-2236-4ff1-a38e-2db8b347b702"
+    },
+    {
+      "exercises": ["5 Pull-Ups", "10 Push-Ups", "15 Air Squats"],
+      "how": "AMRAP in 20 minutes",
+      "isSaved": false,
+      "title": "Cindy",
+      "type": "For Rounds / Reps",
+      "id": "Cindy-0395dab7-7a03-406c-87a3-a93dc82868c3"
+    },
+    {
+      "exercises": [
+        "500 meter Row",
+        "12 Deadlifts (Bodyweight)",
+        "21 Box Jumps (24/20 in)"
+      ],
+      "how": "3 Rounds for Time",
+      "isSaved": false,
+      "title": "Christine",
+      "type": "For Time",
+      "id": "Christine-a3e943ea-383f-4904-8705-8e2111c7202f"
+    },
+    {
+      "exercises": [
+        "400 meter Run",
+        "21 Kettlebell Swings (1.5/1 pood)",
+        "12 Pull-Ups"
+      ],
+      "how": "3 Rounds For Time",
+      "isSaved": false,
+      "title": "Helen",
+      "type": "For Time",
+      "id": "Helen-8c99bc4f-d423-4794-ae3e-91e355d4afa8"
+    },
+    {
+      "exercises": [
+        "Deadlift (1.5 bodyweight)",
+        "Bench Press (bodyweight)",
+        "Clean (3/4 bodyweight)"
+      ],
+      "how": "10-9-8-7-6-5-4-3-2-1 Reps, For Time",
+      "isSaved": false,
+      "title": "Linda",
+      "type": "For Time",
+      "id": "Linda-77640c0a-6630-4df9-a662-727f7c761198"
+    },
+    {
+      "exercises": ["Double-Unders", "Sit-Ups"],
+      "how": "50-40-30-20-10 Reps For Time",
+      "isSaved": false,
+      "title": "Annie",
+      "type": "For Time",
+      "id": "Annie-4d649961-d37a-4843-b0c0-33f95daa3126"
+    },
+    {
+      "exercises": [
+        "1,000 Meter Row",
+        "50 Thrusters (45/35 lb bar)",
+        "30 Pull-Ups"
+      ],
+      "how": "For Time",
+      "isSaved": false,
+      "title": "Jackie",
+      "type": "For Time",
+      "id": "Jackie-364d5ec3-d8c4-4347-b2d2-075d459d8449"
+    },
+    {
+      "exercises": ["30 Snatches (135/95 lb)"],
+      "how": "For Time",
+      "isSaved": false,
+      "title": "Isabel",
+      "type": "For Time",
+      "id": "Isabel-96b99b67-91bd-43e4-9ae7-89862f8c8722"
+    },
+    {
+      "exercises": [
+        "20 Pull-Ups",
+        "30 Push-Ups",
+        "40 Sit-Ups",
+        "50 Air Squats",
+        "3 Minutes Rest"
+      ],
+      "how": "5 Rounds For Time",
+      "isSaved": false,
+      "title": "Barbara",
+      "type": "For Time",
+      "id": "Barbara-3e096e84-fe82-4d8a-b935-3991cb0bf484"
+    },
+    {
+      "exercises": ["Deadlift (225/155 lb)", "Handstand Push-Ups"],
+      "how": "21-15-9 Reps For Time",
+      "isSaved": false,
+      "title": "Diane",
+      "type": "For Time",
+      "id": "Diane-455c84be-5773-41ea-a4f8-c5104048e9e4"
+    },
+    {
+      "exercises": ["150 Wall Ball Shots (20/14 lb, 10/9 ft)"],
+      "how": "For Time",
+      "isSaved": false,
+      "title": "Karen",
+      "type": "For Time",
+      "id": "Karen-e4e36738-9b6a-4e3d-8bde-54a2b08da71b"
+    },
+    {
+      "exercises": ["400 meter Run", "15 Overhead Squats (95/65 lb)"],
+      "how": "5 Rounds For Time",
+      "isSaved": false,
+      "title": "Nancy",
+      "type": "For Time",
+      "id": "Nancy-11518585-5e86-447c-b01b-cf6143cfb65a"
+    },
+    {
+      "exercises": ["5 Pull-Ups", "10 Push-Ups", "15 Air Squats"],
+      "how": "EMOM in 30 minutes",
+      "isSaved": false,
+      "title": "Chelsea",
+      "type": "For Rounds / Reps",
+      "id": "Chelsea-9ec3c776-e9af-4b34-9bfa-695a3da52fb5"
+    },
+    {
+      "exercises": [
+        "100 Pull-Ups",
+        "100 Push-Ups",
+        "100 Sit-Ups",
+        "100 Air Squats"
+      ],
+      "how": "For Time",
+      "isSaved": false,
+      "title": "Angie",
+      "type": "For Time",
+      "id": "Angie-0556ba6e-e63f-405b-80d3-07ab5b742d9b"
+    },
+    {
+      "exercises": ["Squat Cleans (135/95 lb)", "Ring Dips"],
+      "how": "21-15-9 Reps For Time",
+      "isSaved": false,
+      "title": "Elizabeth",
+      "type": "For Time",
+      "id": "Elizabeth-923e15af-c0ab-4193-a533-2bf41d06f803"
+    },
+    {
+      "exercises": [
+        "5 Handstand Push-Ups",
+        "10 Pistols (alternating legs)",
+        "15 Pull-Ups"
+      ],
+      "how": "AMRAP in 20 minutes",
+      "isSaved": false,
+      "title": "Mary",
+      "type": "For Rounds / Reps",
+      "id": "Mary-ac808664-a334-4a0a-b42d-7ca3f3a02707"
+    },
+    {
+      "exercises": ["Muscle-Ups", "Squat Snatches (135/95 lbs)"],
+      "how": "9-7-5 Reps For Time",
+      "isSaved": false,
+      "title": "Amanda",
+      "type": "For Time",
+      "id": "Amanda-c04e9742-04e6-4997-aabe-906abdcc81ef"
+    },
+    {
+      "exercises": [
+        "50 Air Squats",
+        "7 Muscle-Ups",
+        "10 Hang Power Cleans (135/95 lb)"
+      ],
+      "how": "3 Rounds For Time",
+      "isSaved": false,
+      "title": "Nasty Girls",
+      "type": "For Time",
+      "id": "Nasty Girls-48b9c617-5b18-481a-b7f6-651d808d55cc"
+    },
+    {
+      "exercises": [
+        "400 meter Run",
+        "30 Box Jumps (24/20 in)",
+        "30 Wall Ball Shots (20/14 lb)"
+      ],
+      "how": "5 Rounds For Time",
+      "isSaved": false,
+      "title": "Kelly",
+      "type": "For Time",
+      "id": "Kelly-43dfa76f-ada5-4dc7-b641-92b33997160c"
+    },
+    {
+      "exercises": [
+        "800 meter Run",
+        "30 Kettlebell Swings (2/1.5 pood)",
+        "30 Pull-Ups"
+      ],
+      "how": "5 Rounds For Time",
+      "isSaved": false,
+      "title": "Eva",
+      "type": "For Time",
+      "id": "Eva-530bcbba-f6c0-41d9-a0b1-a41e68f5ba7d"
+    },
+    {
+      "exercises": ["Bench Press (bodyweight)", "Pull-Ups"],
+      "how": "5 Rounds for Max Reps",
+      "isSaved": false,
+      "title": "Lynne",
+      "type": "For Rounds / Reps",
+      "id": "Lynne-125c656c-08f4-406e-8d23-e62e96ed7124"
+    },
+    {
+      "exercises": ["400 Meter Run", "Max Pull-Ups"],
+      "how": "AMRAP in 20 minutes",
+      "isSaved": false,
+      "title": "Nicole",
+      "type": "For Rounds / Reps",
+      "id": "Nicole-455fbb80-30cd-4bd4-8bcb-f6e5b1d96e52"
+    },
+    {
+      "exercises": [
+        "10 Pull-Ups",
+        "20 Push-Ups",
+        "30 Air Squats",
+        "15 Pull-Ups",
+        "30 Push-Ups",
+        "45 Air Squats",
+        "20 Pull-Ups",
+        "40 Push-Ups",
+        "60 Air Squats",
+        "25 Pull-Ups",
+        "50 Push-Ups",
+        "75 Air Squats",
+        "30 Pull-Ups",
+        "60 Push-Ups",
+        "90 Air Squats"
+      ],
+      "how": "AMRAP in 20 minutes",
+      "isSaved": false,
+      "title": "Cindy XXX",
+      "type": "For Rounds / Reps",
+      "id": "Cindy XXX-f1b410cf-7928-4e44-b928-3870409934e6"
+    },
+    {
+      "exercises": [
+        "Muscle-Ups",
+        "Squat Snatches (135/95 lb)",
+        "",
+        "Time cap: 13 minutes for males, 15 minutes for females"
+      ],
+      "how": "13-11-9-7-5 Reps for Time",
+      "isSaved": false,
+      "title": "Amanda .45",
+      "type": "For Time",
+      "id": "Amanda .45-d3d919ec-ef08-4392-867b-0b40d1fde579"
+    },
+    {
+      "exercises": [
+        "1 Burpee",
+        "1 Push-Up",
+        "1 Jumping-Jack",
+        "1 Sit-Up",
+        "1 Handstand"
+      ],
+      "how": "50 Rounds for Time",
+      "isSaved": false,
+      "title": "Marguerita",
+      "type": "For Time",
+      "id": "Marguerita-e35d78b7-e583-45b7-a096-a87a8d005257"
+    },
+    {
+      "exercises": ["Thrusters (135/95 lb)", "Weighted Pull-Ups (45/30 lb)"],
+      "how": "15-12-9 Reps For Time",
+      "isSaved": false,
+      "title": "Heavy Fran",
+      "type": "For Time",
+      "id": "Heavy Fran-365e3196-5970-4f28-86a5-d4288c43416c"
+    },
+    {
+      "exercises": [
+        "Clean-and-Jerks (unbroken)",
+        "",
+        "Rest as needed between sets"
+      ],
+      "how": "15-12-9 Reps for Load",
+      "isSaved": false,
+      "title": "Gwen",
+      "type": "For Load",
+      "id": "Gwen-9030bf74-71a9-43e2-ba21-dae3d89c6733"
+    },
+    {
+      "exercises": ["20 Pull-Ups", "40 Push-Ups", "60 Air Squats"],
+      "how": "5 Rounds for Time",
+      "isSaved": false,
+      "title": "Candy",
+      "type": "For Time",
+      "id": "Candy-a2b91203-d96c-425a-840d-724104438912"
+    },
+    {
+      "exercises": [
+        "800m Run ",
+        "15 Dumbbell Thrusters (45/35 lb)",
+        "15 Pull-Ups"
+      ],
+      "how": "5 Rounds for Time",
+      "isSaved": false,
+      "title": "Frelen",
+      "type": "For Time",
+      "id": "Frelen-57cec604-6b4f-48f7-8ae0-d93ca19505cb"
+    },
+    {
+      "exercises": [
+        "5 Pull-Ups",
+        "10 Push-Ups",
+        "15 Air Squats",
+        "20 calorie Row"
+      ],
+      "how": "AMRAP in 20 minutes",
+      "isSaved": false,
+      "title": "Row Cindy Row",
+      "type": "For Rounds / Reps",
+      "id": "Row Cindy Row-da4683fe-2e49-46a0-b711-7bcfd63b7ee0"
+    },
+    {
+      "exercises": [
+        "10 Handstand Push-Ups",
+        "20 Pistols (alternating legs)",
+        "30 Pull-Ups",
+        "15 Handstand Push-Ups",
+        "30 Pistols (alternating legs)",
+        "45 Pull-Ups",
+        "20 Handstand Push-Ups",
+        "40 Pistols (alternating legs)",
+        "60 Pull-Ups",
+        "25 Handstand Push-Ups",
+        "50 Pistols (alternating legs)",
+        "75 Pull-Ups",
+        "30 Handstand Push-Ups",
+        "60 Pistols (alternating legs)",
+        "90 Pull-Ups"
+      ],
+      "how": "AMRAP in 20 minutes",
+      "isSaved": false,
+      "title": "Mary XXX",
+      "type": "For Rounds / Reps",
+      "id": "Mary XXX-07209338-f952-4482-9ee1-d43baf3502cc"
+    },
+    {
+      "exercises": ["5 Handstand Push-Ups", "10 Pull-Ups", "25 Air Squats"],
+      "how": "AMRAP in 20 minutes",
+      "isSaved": false,
+      "title": "Easy Mary",
+      "type": "For Rounds / Reps",
+      "id": "Easy Mary-1a8c029a-72e4-4f42-a40d-862febde5e68"
+    },
+    {
+      "exercises": [
+        "5 Weighted Pull-Ups (35/25 lb)",
+        "10 Incline Push-Ups (feet on 30/24\" box)",
+        "15 Squats (with 45/35 lb plate)"
+      ],
+      "how": "AMRAP in 20 minutes",
+      "isSaved": false,
+      "title": "Hard Cindy",
+      "type": "For Rounds / Reps",
+      "id": "Hard Cindy-311bcaa1-30d1-4fb9-bf5e-8095f689cd93"
+    },
+    {
+      "exercises": [
+        "50 Pistols (alternating legs)",
+        "7 Muscle-Ups",
+        "10 Hang Power Cleans (175/125 lb)"
+      ],
+      "how": "3 Rounds for Time",
+      "isSaved": false,
+      "title": "Nasty Girls v2",
+      "type": "For Time",
+      "id": "Nasty Girls v2-37374cde-f83d-4133-a020-8380c3ca5c1b"
+    },
+    {
+      "exercises": [
+        "3 Power Snatches (135/95 lb)",
+        "15 Wall Ball Shots (20/14 lb, 10/9 ft)"
+      ],
+      "how": "10 Rounds for Time",
+      "isSaved": false,
+      "title": "Karabel",
+      "type": "For Time",
+      "id": "Karabel-6925a760-c8aa-49eb-874d-102c2e7f7098"
+    },
+    {
+      "exercises": ["60 Clean-and-Jerks (135/95 lb)"],
+      "how": "For Time",
+      "isSaved": false,
+      "title": "Double Grace",
+      "type": "For Time",
+      "id": "Double Grace-f0de339a-f35b-49c1-97e4-05cf9b564db8"
+    },
+    {
+      "exercises": ["9 Thrusters (95/65 lb)", "9 Pull-Ups"],
+      "how": "5 Rounds for Time",
+      "isSaved": false,
+      "title": "Fractured Fran",
+      "type": "For Time",
+      "id": "Fractured Fran-136e977e-bcc7-4ff6-9d2b-1d23304ba8de"
+    },
+    {
+      "exercises": [
+        "20 Handstand Push-Ups",
+        "40 Pull-Ups",
+        "60 Pistols (Alternating Legs)"
+      ],
+      "how": "5 Rounds for Time",
+      "isSaved": false,
+      "title": "Maggie",
+      "type": "For Time",
+      "id": "Maggie-d0e8c0c6-7fd9-4917-a08e-89bea9c220ee"
+    },
+    {
+      "exercises": [
+        "800 meter Run",
+        "50 Thrusters (45/35 lb barbell)",
+        "30 Pull-Ups"
+      ],
+      "how": "For Time",
+      "isSaved": false,
+      "title": "Running Jackie",
+      "type": "For Time",
+      "id": "Running Jackie-9cefd538-5d24-44d5-b732-760b7cf0e5aa"
+    },
+    {
+      "exercises": [
+        "800 meter Run",
+        "42 Kettlebell Swings (1.5/1 pood)",
+        "24 Pull-Ups"
+      ],
+      "how": "3 Rounds for Time",
+      "isSaved": false,
+      "title": "Double Helen",
+      "type": "For Time",
+      "id": "Double Helen-ea2990ef-14f8-425d-a502-4467e357363a"
+    },
+    {
+      "exercises": [
+        "5 Strict Handstand Push-Ups",
+        "10 Pistols",
+        "15 Strict Pull-Ups",
+        "10 Strict Handstand Push-Ups",
+        "20 Pistols",
+        "30 Strict Pull-Ups",
+        "15 Strict Handstand Push-Ups",
+        "30 Pistols",
+        "45 Strict Pull-Ups",
+        "10 Strict Handstand Push-Ups",
+        "20 Pistols",
+        "30 Strict Pull-Ups",
+        "5 Strict Handstand Push-Ups",
+        "10 Pistols",
+        "15 Strict Pull-Ups"
+      ],
+      "how": "For Time",
+      "isSaved": false,
+      "title": "Special Mary",
+      "type": "For Time",
+      "id": "Special Mary-3bb35034-4b2f-4ab5-bb1b-2fcdc42a7bcd"
+    },
+    {
+      "exercises": [
+        "60 seconds of Deadlifts (225/155 lb)",
+        "60 seconds of Handstand Push-Ups",
+        "45 seconds of Deadlifts (225/155 lb)",
+        "45 seconds of Handstand Push-Ups",
+        "30 seconds of Deadlifts (225/155 lb)",
+        "30 seconds of Handstand Push-Ups"
+      ],
+      "how": "Max Reps in 4 minutes 30 seconds",
+      "isSaved": false,
+      "title": "Time Priority Diane",
+      "type": "For Rounds / Reps",
+      "id": "Time Priority Diane-b93d308b-f29e-4493-b370-726ec7f234ed"
+    }
+  ]
+}
