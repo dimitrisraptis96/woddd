@@ -61,11 +61,13 @@ class Header extends React.Component {
         {isOpen ? (
           <IconGroup>
             <InfoIcon width={24} height={24} fill={theme.colors.tertiary} />
-            <HeartOutlineIcon
-              width={24}
-              height={24}
-              fill={theme.colors.tertiary}
-            />
+            <Link to={"/favorites"}>
+              <HeartOutlineIcon
+                width={24}
+                height={24}
+                fill={theme.colors.tertiary}
+              />
+            </Link>
             <SignOutIcon
               width={24}
               height={24}

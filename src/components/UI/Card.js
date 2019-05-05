@@ -70,13 +70,13 @@ const How = styled.div`
   color: ${tertiary}
 `;
 
-const Card = ({ title, how, type, exercises, isSaved, saveWod, deleteWod }) => {
+const Card = ({ title, how, type, exercises, isLiked, saveWod, removeWod }) => {
   return (
     <Container>
       <Title>
         {title}
-        {isSaved ? (
-          <HeartIcon width={24} fill={tertiary} onClick={deleteWod} />
+        {isLiked ? (
+          <HeartIcon width={24} fill={tertiary} onClick={removeWod} />
         ) : (
           <HeartOutlineIcon width={24} fill={white} onClick={saveWod} />
         )}
@@ -97,8 +97,8 @@ const Card = ({ title, how, type, exercises, isSaved, saveWod, deleteWod }) => {
 
 Card.propTypes = {
   saveWod: PropTypes.func,
-  deleteWod: PropTypes.func,
-  isSaved: PropTypes.bool,
+  removeWod: PropTypes.func,
+  isLiked: PropTypes.bool,
   title: PropTypes.string.isRequired,
   how: PropTypes.string,
   type: PropTypes.oneOf(["For Time", "For Rounds / Reps", "For Load"]),
@@ -106,7 +106,7 @@ Card.propTypes = {
 };
 
 Card.defaultProps = {
-  isSaved: false,
+  isLiked: false,
 };
 
 export default Card;
