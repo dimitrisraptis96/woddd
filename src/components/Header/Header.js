@@ -1,6 +1,5 @@
 import React from "react";
 import { withRouter } from "react-router";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 import Tooltip from "@material-ui/core/Tooltip";
@@ -60,9 +59,7 @@ class Header extends React.Component {
     const { isOpen } = this.state;
     return (
       <Container>
-        <Link to="/">
-          <Logo orientation="horizontal" />
-        </Link>
+        <Logo orientation="horizontal" onClick={() => this.navigateTo("/")} />
         {isOpen ? (
           <IconGroup>
             <Tooltip title="About" placement="bottom">

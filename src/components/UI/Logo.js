@@ -31,11 +31,11 @@ const Text = styled.p`
   color: ${props => props.theme.colors.tertiary};
 `;
 
-const Logo = ({ orientation, resetWod }) => {
+const Logo = ({ orientation, onClick }) => {
   const isHorizontal = orientation === "horizontal";
   const width = isHorizontal ? 32 : 96;
   return (
-    <Container isHorizontal={isHorizontal} onClick={resetWod}>
+    <Container isHorizontal={isHorizontal} onClick={onClick}>
       <RingIcon color={theme.colors.tertiary} width={width} />
       <Text isHorizontal={isHorizontal}>Woddd</Text>
     </Container>
