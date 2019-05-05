@@ -1,6 +1,9 @@
 import React from "react";
-import styled from "styled-components";
+import { withRouter } from "react-router";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
+
+import Tooltip from "@material-ui/core/Tooltip";
 
 import Logo from "../UI/Logo";
 import CloseIcon from "../UI/Icons/CloseOutline";
@@ -50,8 +53,10 @@ class Header extends React.Component {
     this.setState({ isOpen: !isOpen });
   };
 
+  navigateTo = path => this.props.history.push(path);
+
   render() {
-    const { resetWod, logout } = this.props;
+    const { logout } = this.props;
     const { isOpen } = this.state;
     return (
       <Container>
@@ -60,20 +65,30 @@ class Header extends React.Component {
         </Link>
         {isOpen ? (
           <IconGroup>
-            <InfoIcon width={24} height={24} fill={theme.colors.tertiary} />
-            <Link to={"/favorites"}>
+            <Tooltip title="About" placement="bottom">
+              <InfoIcon
+                width={24}
+                height={24}
+                fill={theme.colors.tertiary}
+                onClick={() => this.navigateTo("/about")}
+              />
+            </Tooltip>
+            <Tooltip title="My Favorites" placement="bottom">
               <HeartOutlineIcon
                 width={24}
                 height={24}
                 fill={theme.colors.tertiary}
+                onClick={() => this.navigateTo("/favorites")}
               />
-            </Link>
-            <SignOutIcon
-              width={24}
-              height={24}
-              fill={theme.colors.tertiary}
-              onClick={logout}
-            />
+            </Tooltip>
+            <Tooltip title="Sign Out" placement="bottom">
+              <SignOutIcon
+                width={24}
+                height={24}
+                fill={theme.colors.tertiary}
+                onClick={logout}
+              />
+            </Tooltip>
             <CloseIcon
               width={32}
               height={32}
@@ -94,4 +109,4 @@ class Header extends React.Component {
   }
 }
 
-export default Header;
+export default withRouter(Header);
