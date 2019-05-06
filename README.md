@@ -18,5 +18,6 @@ Check the live app [here](https://woddd.netlify.com).
 - [ ] Find way to handle favorites Wods
 - [ ] Add Guest support
 - [ ] Footer
+- [ ] Delete account feature
 
 ## 🚧 WIP
