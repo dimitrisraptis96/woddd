@@ -1,7 +1,7 @@
 import React from "react";
 import { database } from "../utils/firebase";
 
-import Favorites from "../components/Body/Favorites/Favorites";
+import Favorites from "../components/Pages/Favorites/Favorites";
 
 class FavoritesContainer extends React.Component {
   state = {
