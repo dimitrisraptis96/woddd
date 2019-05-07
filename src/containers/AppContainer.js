@@ -6,15 +6,15 @@ import { Route, Switch, withRouter } from "react-router";
 import withFirebaseAuth from "react-with-firebase-auth";
 import { firebaseAppAuth, providers } from "../utils/firebase";
 
-import PrivateRoute from "../components/PrivateRoute";
+import About from "./AboutContainer";
 import Dashboard from "./DashboardContainer";
 import Favorites from "./FavoritesContainer";
 import Login from "./LoginContainer";
 import Wod from "./WodContainer";
 
-import About from "../components/Body/About/About";
+import PrivateRoute from "../components/PrivateRoute";
 import Header from "../components/Header/Header";
-import Body from "../components/Body/Body";
+import Body from "../components/Pages/Body";
 import Page404 from "../components/Page404";
 
 import theme from "../utils/theme";

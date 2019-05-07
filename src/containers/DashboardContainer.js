@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 
-import Dashboard from "../components/Body/Dashboard/Dashboard";
+import Dashboard from "../components/Pages/Dashboard/Dashboard";
 
 import { database } from "../utils/firebase";
 
