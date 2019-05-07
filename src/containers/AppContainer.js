@@ -14,7 +14,7 @@ import Wod from "./WodContainer";
 
 import PrivateRoute from "../components/PrivateRoute";
 import Header from "../components/Header/Header";
-import Body from "../components/Pages/Body";
+import Layout from "../components/UI/Layout";
 import Page404 from "../components/Page404";
 
 import theme from "../utils/theme";
@@ -75,7 +75,7 @@ class App extends React.Component {
         <React.Fragment>
           <GlobalStyle />
           <Header logout={this.logout} />
-          <Body>
+          <Layout>
             <Switch>
               <PrivateRoute exact path="/" component={Dashboard} user={user} />
               <PrivateRoute
@@ -94,7 +94,7 @@ class App extends React.Component {
               />
               <Route component={Page404} />
             </Switch>
-          </Body>
+          </Layout>
         </React.Fragment>
       </ThemeProvider>
     );
