@@ -2,7 +2,7 @@ import React from "react";
 import { database } from "../utils/firebase";
 
 import Wod from "../components/Pages/Wod/Wod";
-import WodLoader from "../components/Pages/Wod/Wod.loader";
+// import WodLoader from "../components/Pages/Wod/Wod.loader";
 import Spinner from "../components/UI/Spinner";
 
 import styled from "styled-components";
@@ -22,8 +22,8 @@ class WodContainer extends React.Component {
     isFetching: true,
   };
 
-  componentDidcontainersunt() {
-    this.getMacontainersods();
+  componentDidMount() {
+    this.getMaxWods();
     this.fetchLikes();
   }
 
