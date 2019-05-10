@@ -14,6 +14,7 @@ import Wod from "./WodContainer";
 
 import PrivateRoute from "../components/PrivateRoute";
 import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
 import Layout from "../components/UI/Layout";
 import Page404 from "../components/Page404";
 
@@ -95,6 +96,7 @@ class App extends React.Component {
               <Route component={Page404} />
             </Switch>
           </Layout>
+          <Footer />
         </React.Fragment>
       </ThemeProvider>
     );
