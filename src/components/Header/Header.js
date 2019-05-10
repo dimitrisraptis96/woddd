@@ -26,7 +26,8 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  background-color: ${theme.colors.secondary};
+  background-color: ${theme.colors.primary};
+  border-bottom: solid 2px ${theme.colors.secondary};
 `;
 
 const IconGroup = styled.div`
