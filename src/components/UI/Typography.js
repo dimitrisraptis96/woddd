@@ -35,6 +35,39 @@ Body.defaultProps = {
   align: "center",
 };
 
+export const Small = styled.p`
+  font-family: Rubik;
+  font-size: 12px;
+  font-weight: ${props => props.weight};
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: ${props => props.align};
+  color: ${theme.colors.white};
+  margin: 0;
+`;
+
+Small.propTypes = {
+  weight: PropTypes.oneOf(["normal", "bold", "italic"]),
+  color: PropTypes.oneOf([
+    "primary",
+    "secondary",
+    "tertiary",
+    "success",
+    "error",
+    "warning",
+    "info",
+  ]),
+  align: PropTypes.oneOf(["center", "left", "center", "justify"]),
+};
+
+Small.defaultProps = {
+  weight: "normal",
+  color: "primary",
+  align: "center",
+};
+
 export const Header1 = styled.h1`
   font-family: Rubik;
   font-size: 34.2px;
