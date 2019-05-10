@@ -9,6 +9,8 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+  box-sizing: border-box;
+
   h1 {
     margin-bottom: 1rem;
   }
@@ -24,6 +26,8 @@ const WodsList = styled.div`
   align-items: center;
   width: 100%;
 
+  color: ${props => props.theme.colors.tertiary};
+  font-weight: bold;
   > * {
     margin-top: 1rem;
   }

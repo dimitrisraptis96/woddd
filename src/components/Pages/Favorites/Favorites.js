@@ -24,6 +24,9 @@ const WodsList = styled.div`
   align-items: center;
   width: 100%;
 
+  color: ${props => props.theme.colors.tertiary};
+  font-weight: bold;
+
   > * {
     margin-top: 1rem;
   }
