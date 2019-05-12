@@ -2,6 +2,21 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import theme from "../../utils/theme";
 
+function getColor(color) {
+  switch (color) {
+    case "primary":
+      return theme.colors.primary;
+    case "secondary":
+      return theme.colors.secondary;
+    case "tertiary":
+      return theme.colors.tertiary;
+    case "white":
+      return theme.colors.white;
+    default:
+      return theme.colors.white;
+  }
+}
+
 export const Body = styled.p`
   font-family: Rubik;
   font-size: 16px;
@@ -11,7 +26,7 @@ export const Body = styled.p`
   line-height: normal;
   letter-spacing: normal;
   text-align: ${props => props.align};
-  color: ${theme.colors.white};
+  color: ${props => getColor(props.color)};
   margin: 0;
 `;
 
@@ -31,7 +46,7 @@ Body.propTypes = {
 
 Body.defaultProps = {
   weight: "normal",
-  color: "primary",
+  color: "white",
   align: "center",
 };
 
@@ -44,7 +59,7 @@ export const Small = styled.p`
   line-height: normal;
   letter-spacing: normal;
   text-align: ${props => props.align};
-  color: ${theme.colors.white};
+  color: ${props => getColor(props.color)};
   margin: 0;
 `;
 
@@ -64,7 +79,7 @@ Small.propTypes = {
 
 Small.defaultProps = {
   weight: "normal",
-  color: "primary",
+  color: "white",
   align: "center",
 };
 
@@ -77,7 +92,7 @@ export const Header1 = styled.h1`
   line-height: normal;
   letter-spacing: normal;
   text-align: ${props => props.align};
-  color: ${theme.colors.tertiary};
+  color: ${props => getColor(props.color)};
   margin: 0;
 `;
 
@@ -97,6 +112,6 @@ Header1.propTypes = {
 
 Header1.defaultProps = {
   weight: "normal",
-  color: "primary",
+  color: "white",
   align: "center",
 };
