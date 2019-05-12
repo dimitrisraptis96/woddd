@@ -86,7 +86,12 @@ class App extends React.Component {
                 user={user}
               />
               <PrivateRoute exact path="/about" component={About} user={user} />
-              <PrivateRoute exact path="/wod" component={Wod} user={user} />
+              <PrivateRoute
+                exact
+                path="/wod/:wodId"
+                component={Wod}
+                user={user}
+              />
               <Route
                 path="/login"
                 render={props => (
