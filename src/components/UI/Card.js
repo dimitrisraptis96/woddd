@@ -76,9 +76,19 @@ const Card = ({ title, how, type, exercises, isLiked, saveWod, removeWod }) => {
       <Title>
         {title}
         {isLiked ? (
-          <HeartIcon width={24} fill={tertiary} onClick={removeWod} />
+          <HeartIcon
+            width={24}
+            fill={tertiary}
+            onClick={removeWod}
+            style={{ cursor: "pointer" }}
+          />
         ) : (
-          <HeartOutlineIcon width={24} fill={white} onClick={saveWod} />
+          <HeartOutlineIcon
+            width={24}
+            fill={white}
+            onClick={saveWod}
+            style={{ cursor: "pointer" }}
+          />
         )}
       </Title>
       <Type>
