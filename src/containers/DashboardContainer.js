@@ -42,7 +42,7 @@ class DashboardContainer extends Component {
   };
 
   generate = () => {
-    this.props.history.push("/wod");
+    this.props.history.push("/wod/random");
   };
 
   getRandomInt = max => {

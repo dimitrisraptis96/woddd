@@ -36,10 +36,14 @@ class FavoritesContainer extends React.Component {
       });
   };
 
+  handleWod = id => {
+    this.props.history.push(`/wod/${id}`);
+  };
+
   render() {
     const { likes } = this.state;
 
-    return <Favorites wods={likes} />;
+    return <Favorites wods={likes} handleWod={this.handleWod} />;
   }
 }
 
