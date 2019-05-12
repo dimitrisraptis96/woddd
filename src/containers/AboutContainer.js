@@ -24,9 +24,13 @@ class AboutContainer extends Component {
       });
   }
 
+  handleWod = id => {
+    this.props.history.push(`/wod/${id}`);
+  };
+
   render() {
     const { wods } = this.state;
-    return <About wods={wods} />;
+    return <About wods={wods} handleWod={this.handleWod} />;
   }
 }
 
