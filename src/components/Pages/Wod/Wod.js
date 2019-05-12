@@ -1,10 +1,11 @@
 import React from "react";
+import styled from "styled-components";
 
 import Button from "../../UI/Button";
 import Card from "../../UI/Card";
 import RefreshIcon from "../../UI/Icons/RefreshOutline";
 import { Header1, Body } from "../../UI/Typography";
-import styled from "styled-components";
+import ArrowBackOutline from "../../UI/Icons/ArrowBackOutline";
 
 const Container = styled.div`
   display: flex;
@@ -19,10 +20,42 @@ const Container = styled.div`
   }
 `;
 
-const Wod = ({ wod, saveWod, removeWod, isLiked, generate }) => {
+const GoBackDiv = styled.div`
+  align-self: flex-start;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-bottom: 1rem;
+
+  cursor: pointer;
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: ${props => props.theme.colors.white};
+    margin-right: 0.5rem;
+  }
+`;
+
+const Wod = ({
+  wod,
+  saveWod,
+  removeWod,
+  isLiked,
+  generate,
+  isRandom,
+  goBack,
+}) => {
   return (
     <Container>
-      <Header1 weight="bold">Random WOD</Header1>
+      {/* <Header1 weight="bold">Random WOD</Header1> */}
+      {!isRandom && (
+        <GoBackDiv onClick={goBack}>
+          <ArrowBackOutline />
+          <Body color="white">Back</Body>
+        </GoBackDiv>
+      )}
       <Card
         title={wod.title}
         type={wod.type}
@@ -32,10 +65,12 @@ const Wod = ({ wod, saveWod, removeWod, isLiked, generate }) => {
         saveWod={saveWod}
         removeWod={removeWod}
       />
-      <Button onClick={generate}>
-        <RefreshIcon />
-        Generate Again
-      </Button>
+      {isRandom && (
+        <Button onClick={generate}>
+          <RefreshIcon />
+          Generate Again
+        </Button>
+      )}
     </Container>
   );
 };

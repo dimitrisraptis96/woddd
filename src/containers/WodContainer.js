@@ -1,5 +1,6 @@
 import React from "react";
 import { database } from "../utils/firebase";
+import { withRouter } from "react-router";
 
 import Wod from "../components/Pages/Wod/Wod";
 // import WodLoader from "../components/Pages/Wod/Wod.loader";
@@ -17,14 +18,24 @@ const Column = styled.div`
 `;
 class WodContainer extends React.Component {
   state = {
+    wods: [],
     wod: null,
     likes: [],
     isFetching: true,
   };
 
   componentDidMount() {
-    this.getMaxWods();
+    const { wodId } = this.props.match.params;
+    const isRandom = wodId === "random";
+
+    if (isRandom) {
+      this.fetchWods();
+    } else {
+      this.fetchWodById(wodId.replace("%20", " "));
+    }
+
     this.fetchLikes();
+    this.setState({ isRandom });
   }
 
   fetchLikes = () => {
@@ -55,7 +66,8 @@ class WodContainer extends React.Component {
         }
       });
   };
-  getMaxWods = () => {
+
+  fetchWods = () => {
     this.setState({ isFetching: true });
 
     database
@@ -63,7 +75,6 @@ class WodContainer extends React.Component {
       .once("value")
       .then(snapshot => {
         const wods = snapshot.val();
-
         this.setState({ wods, isFetching: false }, this.generate);
       });
   };
@@ -108,6 +119,28 @@ class WodContainer extends React.Component {
     return Math.floor(Math.random() * Math.floor(max));
   };
 
+  fetchWodById = id => {
+    this.setState({ isFetching: true });
+    console.log(id);
+
+    database
+      .ref("/wods")
+      .orderByChild("id")
+      .equalTo(id)
+      .on("value", snapshot => {
+        const data = snapshot.val();
+
+        let wod = null;
+        if (typeof data === "object") {
+          wod = Object.keys(data).map(key => data[key])[0];
+        } else {
+          wod = data[0];
+        }
+
+        this.setState({ wod, isFetching: false });
+      });
+  };
+
   generate = () => {
     const max = this.state.wods.length;
 
@@ -120,17 +153,21 @@ class WodContainer extends React.Component {
         const wod = snapshot.val();
         this.setState({
           wod,
-          isReady: true,
+          isFetching: false,
         });
       });
   };
 
+  goBack = () => {
+    this.props.history.goBack();
+  };
+
   render() {
-    const { wod, likes, isFetching } = this.state;
+    const { wod, likes, isFetching, isRandom } = this.state;
     if (isFetching || wod === null)
       return (
         <Column>
-          <p>Finding the greatest workout</p>
+          <p>Always warm up before excersing</p>
           <Spinner />
         </Column>
       );
@@ -139,14 +176,16 @@ class WodContainer extends React.Component {
 
     return (
       <Wod
+        isRandom={isRandom}
         isLiked={isLiked}
         wod={wod}
         generate={this.generate}
         saveWod={() => this.saveWod(wod.id)}
         removeWod={() => this.removeWod(wod.id)}
+        goBack={this.goBack}
       />
     );
   }
 }
 
-export default WodContainer;
+export default withRouter(WodContainer);
