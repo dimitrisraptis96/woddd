@@ -164,6 +164,8 @@ class WodContainer extends React.Component {
 
   render() {
     const { wod, likes, isFetching, isRandom } = this.state;
+    console.log(this.state);
+
     if (isFetching || wod === null)
       return (
         <Column>
