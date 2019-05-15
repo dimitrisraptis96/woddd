@@ -21,7 +21,7 @@ class WodContainer extends React.Component {
     wods: [],
     wod: null,
     likes: [],
-    isFetching: true,
+    isFetching: false,
   };
 
   componentDidMount() {
@@ -62,7 +62,7 @@ class WodContainer extends React.Component {
             .set({
               likes: [],
             })
-            .then(() => this.fetchLikes());
+            .then(() => this.setState({ isFetching: false }));
         }
       });
   };
@@ -121,7 +121,6 @@ class WodContainer extends React.Component {
 
   fetchWodById = id => {
     this.setState({ isFetching: true });
-    console.log(id);
 
     database
       .ref("/wods")
@@ -164,7 +163,6 @@ class WodContainer extends React.Component {
 
   render() {
     const { wod, likes, isFetching, isRandom } = this.state;
-    console.log(this.state);
 
     if (isFetching || wod === null)
       return (
