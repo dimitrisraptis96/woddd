@@ -10,7 +10,9 @@ import InfoIcon from "../UI/Icons/InfoOutline";
 import HeartOutlineIcon from "../UI/Icons/HeartOutline";
 import MenuIcon from "../UI/Icons/MenuOutline";
 import SignOutIcon from "../UI/Icons/SignOutAlt";
+import ListIcon from "../UI/Icons/ListOutline";
 
+import { jellyMixin } from "../../utils/mixins";
 import theme from "../../utils/theme";
 
 const Container = styled.div`
@@ -41,6 +43,11 @@ const IconGroup = styled.div`
   > svg:last-child {
     margin-left: 2rem;
   }
+
+  svg:hover {
+    ${jellyMixin}
+    fill: white;
+  }
 `;
 
 class Header extends React.Component {
@@ -65,6 +72,14 @@ class Header extends React.Component {
           <IconGroup>
             <Tooltip title="About" placement="bottom">
               <InfoIcon
+                width={24}
+                height={24}
+                fill={theme.colors.tertiary}
+                onClick={() => this.navigateTo("/about")}
+              />
+            </Tooltip>
+            <Tooltip title="Workouts" placement="bottom">
+              <ListIcon
                 width={24}
                 height={24}
                 fill={theme.colors.tertiary}

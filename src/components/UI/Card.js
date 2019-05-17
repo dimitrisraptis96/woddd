@@ -7,7 +7,10 @@ import { rgba } from "polished";
 import DubmbellIcon from "./Icons/Dumbbell";
 import HeartIcon from "./Icons/Heart";
 import HeartOutlineIcon from "./Icons/HeartOutline";
+import { Small, Body, Header1 } from "./Typography";
+
 import theme from "../../utils/theme";
+import { jellyMixin } from "../../utils/mixins";
 
 const { primary, secondary, tertiary, white } = theme.colors;
 
@@ -23,15 +26,21 @@ const Container = styled.div`
   min-width: 300px;
 `;
 
-const Title = styled.h1`
-  font-size: 1.5rem;
-  margin-bottom: 0;
-  margin-top: 0;
-  color: ${tertiary};
+const Header = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 0.5rem;
+
+  h1 {
+    margin-bottom: 0 !important;
+  }
+
+  svg:hover {
+    ${jellyMixin};
+    fill: ${props => (props.isLiked ? white : tertiary)};
+  }
 `;
 
 const Type = styled.div`
@@ -44,6 +53,8 @@ const Type = styled.div`
     margin-right: 0.5rem;
     fill: ${tertiary};
   }
+
+  margin-bottom: 1.5rem;
   font-size: 0.8rem;
   color: ${tertiary};
 `;
@@ -56,9 +67,7 @@ const WorkoutUl = styled.ul`
 `;
 
 const WorkoutLi = styled.li`
-  font-size: 1rem;
-  line-height: 1.75;
-  color: ${white};
+  padding: 0.5rem;
 `;
 
 const How = styled.div`
@@ -73,8 +82,10 @@ const How = styled.div`
 const Card = ({ title, how, type, exercises, isLiked, saveWod, removeWod }) => {
   return (
     <Container>
-      <Title>
-        {title}
+      <Header isLiked={isLiked}>
+        <Header1 color="tertiary" weight="bold">
+          {title}
+        </Header1>
         {isLiked ? (
           <HeartIcon
             width={24}
@@ -90,15 +101,17 @@ const Card = ({ title, how, type, exercises, isLiked, saveWod, removeWod }) => {
             style={{ cursor: "pointer" }}
           />
         )}
-      </Title>
+      </Header>
       <Type>
         <DubmbellIcon width={16} />
-        {type}
+        <Small color="tertiary">{type}</Small>
       </Type>
       {/* <How>{how}</How> */}
       <WorkoutUl>
         {exercises.map((exercise, index) => (
-          <WorkoutLi key={index}>{exercise}</WorkoutLi>
+          <WorkoutLi key={index}>
+            <Body align="left">{exercise}</Body>
+          </WorkoutLi>
         ))}
       </WorkoutUl>
     </Container>
