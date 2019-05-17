@@ -4,18 +4,8 @@ import { withRouter } from "react-router";
 
 import Wod from "../components/Pages/Wod/Wod";
 // import WodLoader from "../components/Pages/Wod/Wod.loader";
-import Spinner from "../components/UI/Spinner";
+import Loading from "../components/UI/Loading";
 
-import styled from "styled-components";
-
-const Column = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  color: ${props => props.theme.colors.tertiary};
-`;
 class WodContainer extends React.Component {
   state = {
     wods: [],
@@ -164,13 +154,7 @@ class WodContainer extends React.Component {
   render() {
     const { wod, likes, isFetching, isRandom } = this.state;
 
-    if (isFetching || wod === null)
-      return (
-        <Column>
-          <p>Always warm up before excersing</p>
-          <Spinner />
-        </Column>
-      );
+    if (isFetching || wod === null || true) return <Loading />;
 
     const isLiked = likes.some(likeId => likeId === wod.id);
 
