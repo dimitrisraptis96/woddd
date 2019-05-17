@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router";
 
-import Login from "../components/Login/Login";
+import Login from "../components/Pages/Login/Login";
 
 class LoginContainer extends Component {
   signin = () => {

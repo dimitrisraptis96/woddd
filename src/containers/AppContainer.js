@@ -16,7 +16,7 @@ import PrivateRoute from "../components/PrivateRoute";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import Layout from "../components/UI/Layout";
-import Page404 from "../components/Page404";
+import Page404 from "../components/Pages/Page404/Page404";
 
 import theme from "../utils/theme";
 
