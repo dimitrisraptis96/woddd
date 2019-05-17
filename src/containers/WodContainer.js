@@ -6,12 +6,16 @@ import Wod from "../components/Pages/Wod/Wod";
 // import WodLoader from "../components/Pages/Wod/Wod.loader";
 import Loading from "../components/UI/Loading";
 
+import pickRandom from "../utils/pickRandom";
+import tips from "../constants/tips";
+
 class WodContainer extends React.Component {
   state = {
     wods: [],
     wod: null,
     likes: [],
     isFetching: false,
+    tip: pickRandom(tips),
   };
 
   componentDidMount() {
@@ -68,6 +72,7 @@ class WodContainer extends React.Component {
         this.setState({ wods, isFetching: false }, this.generate);
       });
   };
+  tip;
 
   saveWod = wodId => {
     const { likes } = this.state;
@@ -152,9 +157,11 @@ class WodContainer extends React.Component {
   };
 
   render() {
-    const { wod, likes, isFetching, isRandom } = this.state;
+    const { wod, likes, isFetching, isRandom, tip } = this.state;
 
-    if (isFetching || wod === null || true) return <Loading />;
+    if (isFetching || wod === null) {
+      return <Loading tip={tip} />;
+    }
 
     const isLiked = likes.some(likeId => likeId === wod.id);
 
