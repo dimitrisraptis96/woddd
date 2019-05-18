@@ -83,7 +83,7 @@ class Header extends React.Component {
                 width={24}
                 height={24}
                 fill={theme.colors.tertiary}
-                onClick={() => this.navigateTo("/about")}
+                onClick={() => this.navigateTo("/workouts")}
               />
             </Tooltip>
             <Tooltip title="My Favorites" placement="bottom">

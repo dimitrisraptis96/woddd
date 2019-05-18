@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 
-import About from "../components/Pages/About/About";
+import Workouts from "../components/Pages/Workouts/Workouts";
 
 import { database } from "../utils/firebase";
 
-class AboutContainer extends Component {
+class WorkoutsContainer extends Component {
   state = {
     wods: [],
     isFetched: false,
@@ -30,8 +30,8 @@ class AboutContainer extends Component {
 
   render() {
     const { wods } = this.state;
-    return <About wods={wods} handleWod={this.handleWod} />;
+    return <Workouts wods={wods} handleWod={this.handleWod} />;
   }
 }
 
-export default withRouter(AboutContainer);
+export default withRouter(WorkoutsContainer);

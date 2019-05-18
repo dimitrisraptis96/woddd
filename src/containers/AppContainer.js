@@ -6,12 +6,13 @@ import { Route, Switch, withRouter } from "react-router";
 import withFirebaseAuth from "react-with-firebase-auth";
 import { firebaseAppAuth, providers } from "../utils/firebase";
 
-import About from "./AboutContainer";
+import Workouts from "./WorkoutsContainer";
 import Dashboard from "./DashboardContainer";
 import Favorites from "./FavoritesContainer";
 import Login from "./LoginContainer";
 import Wod from "./WodContainer";
 
+import About from "../components/Pages/About/About";
 import PrivateRoute from "../components/PrivateRoute";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
@@ -83,6 +84,12 @@ class App extends React.Component {
                 exact
                 path="/favorites"
                 component={Favorites}
+                user={user}
+              />
+              <PrivateRoute
+                exact
+                path="/workouts"
+                component={Workouts}
                 user={user}
               />
               <PrivateRoute exact path="/about" component={About} user={user} />
