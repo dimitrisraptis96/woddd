@@ -69,7 +69,7 @@ const Favorites = ({ wods, handleWod }) => {
       <Header1 weight="bold" color="tertiary">
         Favorites
       </Header1>
-      <Body>Here you can manage your favorite WODs.</Body>
+      <Body>Find and manage your saved wods.</Body>
       <WodsList>
         {wods.map(wod => (
           <WodCard

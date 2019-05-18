@@ -74,7 +74,7 @@ const Workouts = ({ wods, handleWod }) => {
       <Header1 weight="bold" color="tertiary">
         Workouts
       </Header1>
-      <Body>Here you can find all the available workouts:</Body>
+      <Body>The available workouts of Woddd app:</Body>
       <WodsList>
         {wods.map(wod => (
           <WodCard key={wod.id} onClick={() => handleWod(wod.id)}>
