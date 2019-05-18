@@ -52,7 +52,7 @@ Body.defaultProps = {
 
 export const Small = styled.p`
   font-family: Rubik;
-  font-size: 12px;
+  font-size: 12.8px;
   font-weight: ${props => props.weight};
   font-style: normal;
   font-stretch: normal;
@@ -85,7 +85,7 @@ Small.defaultProps = {
 
 export const Header1 = styled.h1`
   font-family: Rubik;
-  font-size: 34.2px;
+  font-size: 31.25px;
   font-weight: ${props => props.weight};
   font-style: normal;
   font-stretch: normal;
@@ -111,6 +111,39 @@ Header1.propTypes = {
 };
 
 Header1.defaultProps = {
+  weight: "normal",
+  color: "white",
+  align: "center",
+};
+
+export const Header2 = styled.h2`
+  font-family: Rubik;
+  font-size: 25px;
+  font-weight: ${props => props.weight};
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: ${props => props.align};
+  color: ${props => getColor(props.color)};
+  margin: 0;
+`;
+
+Header2.propTypes = {
+  weight: PropTypes.oneOf(["normal", "bold", "italic"]),
+  color: PropTypes.oneOf([
+    "primary",
+    "secondary",
+    "tertiary",
+    "success",
+    "error",
+    "warning",
+    "info",
+  ]),
+  align: PropTypes.oneOf(["center", "left", "center", "justify"]),
+};
+
+Header2.defaultProps = {
   weight: "normal",
   color: "white",
   align: "center",
