@@ -30,6 +30,11 @@ const Container = styled.div`
 
   background-color: ${theme.colors.primary};
   border-bottom: solid 2px ${theme.colors.secondary};
+
+  svg:hover {
+    ${jellyMixin}
+    fill: white;
+  }
 `;
 
 const IconGroup = styled.div`
@@ -42,11 +47,6 @@ const IconGroup = styled.div`
   }
   > svg:last-child {
     margin-left: 2rem;
-  }
-
-  svg:hover {
-    ${jellyMixin}
-    fill: white;
   }
 `;
 
@@ -70,12 +70,12 @@ class Header extends React.Component {
         <Logo orientation="horizontal" onClick={() => this.navigateTo("/")} />
         {isOpen ? (
           <IconGroup>
-            <Tooltip title="About" placement="bottom">
-              <InfoIcon
+            <Tooltip title="My Favorites" placement="bottom">
+              <HeartOutlineIcon
                 width={24}
                 height={24}
                 fill={theme.colors.tertiary}
-                onClick={() => this.navigateTo("/about")}
+                onClick={() => this.navigateTo("/favorites")}
               />
             </Tooltip>
             <Tooltip title="Workouts" placement="bottom">
@@ -86,12 +86,12 @@ class Header extends React.Component {
                 onClick={() => this.navigateTo("/workouts")}
               />
             </Tooltip>
-            <Tooltip title="My Favorites" placement="bottom">
-              <HeartOutlineIcon
+            <Tooltip title="About" placement="bottom">
+              <InfoIcon
                 width={24}
                 height={24}
                 fill={theme.colors.tertiary}
-                onClick={() => this.navigateTo("/favorites")}
+                onClick={() => this.navigateTo("/about")}
               />
             </Tooltip>
             <Tooltip title="Sign Out" placement="bottom">
