@@ -10,14 +10,14 @@
 
 ## 🔥 App
 
-Check the live app [here](https://woddd.netlify.com).
+Check the live app [here](https://woddd.run).
 
 ## 🏃 To-do
 
-- [ ] About & Favorites page design
-- [ ] Find way to handle favorites Wods
+- [x] About & Favorites page design
+- [x] Find way to handle favorites Wods
 - [ ] Add Guest support
-- [ ] Footer
+- [x] Footer
 - [ ] Delete account feature
 
 ## 🚧 WIP

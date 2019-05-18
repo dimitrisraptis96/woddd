@@ -2,6 +2,7 @@
   "name": "woddd",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://www.woddd.run",
   "dependencies": {
     "@material-ui/core": "^3.9.3",
     "firebase": "^5.10.1",
