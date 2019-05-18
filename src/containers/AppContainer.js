@@ -50,6 +50,14 @@ class App extends React.Component {
   };
 
   componentDidMount() {
+    window.onblur = function() {
+      document.title = "Miss you already...";
+    };
+
+    window.onfocus = function() {
+      document.title = "Woddd - Generate a random WOD";
+    };
+
     firebaseAppAuth.onAuthStateChanged(user => {
       if (user) {
         localStorage.setItem("user", JSON.stringify(user));
