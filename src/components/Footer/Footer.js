@@ -5,6 +5,7 @@ import Link from "../UI/Link";
 import { Small } from "../UI/Typography";
 
 const Container = styled.div`
+  z-index: 2;
   position: fixed;
   bottom: 0;
   width: 100vw;
