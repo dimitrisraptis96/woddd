@@ -100,7 +100,7 @@ class App extends React.Component {
                 component={Workouts}
                 user={user}
               />
-              <PrivateRoute exact path="/about" component={About} user={user} />
+              <Route exact path="/about" render={props => <About />} />
               <PrivateRoute
                 exact
                 path="/wod/:wodId"
