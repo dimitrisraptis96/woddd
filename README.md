@@ -4,9 +4,10 @@
 </p>
 
 <p align="center">
-    <a href="https://app.netlify.com/sites/woddd/deploys"><img src="https://api.netlify.com/api/v1/badges/cd04983d-fd6a-4979-bce7-b36cfefb1d83/deploy-status)" alt="Build Status"></a>
+    <a href="https://app.netlify.com/sites/woddd/deploys"><img src="https://api.netlify.com/api/v1/badges/cd04983d-fd6a-4979-bce7-b36cfefb1d83/deploy-status" alt="Build Status"></a>
     <!-- <a href="https://github.com/tailwindcss/tailwindcss/blob/master/LICENSE"><img src="https://img.shields.io/github/license/dimitrisraptis96/woddd.svg?label=License&style=popout" alt="License"></a> -->
 </p>
+
 ---
 
 ## 🔥 App
