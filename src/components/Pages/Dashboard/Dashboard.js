@@ -19,7 +19,7 @@ const Dashboard = ({ generate, isFetched }) => {
   return (
     <React.Fragment>
       <Logo />
-      <Tagline>Generate a random Wod and kill it</Tagline>
+      <Tagline>Generate a random Wod and kill it!</Tagline>
       <Button onClick={generate} isDisabled={!isFetched}>
         <RefreshIcon />
         Generate

@@ -8,7 +8,9 @@ import FacebookOutlineIcon from "../../UI/Icons/FacebookOutline";
 const Login = ({ signin }) => (
   <React.Fragment>
     <Logo />
-    <Body />
+    <Body style={{ marginBottom: "2rem" }}>
+      Generate a random Wod and kill it!
+    </Body>
     <Button onClick={signin}>
       <FacebookOutlineIcon />
       Sign in with Facebook
