@@ -86,7 +86,7 @@ class App extends React.Component {
       <ThemeProvider theme={theme}>
         <React.Fragment>
           <GlobalStyle />
-          <Header logout={this.logout} />
+          <Header logout={this.logout} user={user} />
           <Layout>
             <Switch>
               <PrivateRoute exact path="/" component={Dashboard} user={user} />

@@ -11,6 +11,7 @@ import HeartOutlineIcon from "../UI/Icons/HeartOutline";
 import MenuIcon from "../UI/Icons/MenuOutline";
 import SignOutIcon from "../UI/Icons/SignOutAlt";
 import ListIcon from "../UI/Icons/ListOutline";
+import SignInIcon from "../UI/Icons/SignInAlt";
 
 import { jellyMixin } from "../../utils/mixins";
 import theme from "../../utils/theme";
@@ -63,7 +64,7 @@ class Header extends React.Component {
   navigateTo = path => this.props.history.push(path);
 
   render() {
-    const { logout } = this.props;
+    const { logout, user } = this.props;
     const { isOpen } = this.state;
     return (
       <Container>
@@ -94,14 +95,25 @@ class Header extends React.Component {
                 onClick={() => this.navigateTo("/about")}
               />
             </Tooltip>
-            <Tooltip title="Sign Out" placement="bottom">
-              <SignOutIcon
-                width={24}
-                height={24}
-                fill={theme.colors.tertiary}
-                onClick={logout}
-              />
-            </Tooltip>
+            {user ? (
+              <Tooltip title="Sign Out" placement="bottom">
+                <SignOutIcon
+                  width={24}
+                  height={24}
+                  fill={theme.colors.tertiary}
+                  onClick={logout}
+                />
+              </Tooltip>
+            ) : (
+              <Tooltip title="Sign In" placement="bottom">
+                <SignInIcon
+                  width={24}
+                  height={24}
+                  fill={theme.colors.tertiary}
+                  onClick={() => this.navigateTo("/login")}
+                />
+              </Tooltip>
+            )}
             <CloseIcon
               width={32}
               height={32}
