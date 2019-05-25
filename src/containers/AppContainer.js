@@ -11,12 +11,14 @@ import Dashboard from "./DashboardContainer";
 import Favorites from "./FavoritesContainer";
 import Login from "./LoginContainer";
 import Wod from "./WodContainer";
+import GuestWod from "./GuestWodContainer";
 
 import About from "../components/Pages/About/About";
 import PrivateRoute from "../components/PrivateRoute";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import Layout from "../components/UI/Layout";
+import Guest from "../components/Pages/Guest/Guest";
 import Page404 from "../components/Pages/Page404/Page404";
 
 import theme from "../utils/theme";
@@ -100,7 +102,6 @@ class App extends React.Component {
                 component={Workouts}
                 user={user}
               />
-              <Route exact path="/about" render={props => <About />} />
               <PrivateRoute
                 exact
                 path="/wod/:wodId"
@@ -112,6 +113,13 @@ class App extends React.Component {
                 render={props => (
                   <Login {...props} signInWithFacebook={signInWithFacebook} />
                 )}
+              />
+              <Route exact path="/about" render={props => <About />} />
+              <Route exact path="/guest" render={props => <Guest />} />
+              <Route
+                exact
+                path="/guest/random"
+                render={props => <GuestWod />}
               />
               <Route component={Page404} />
             </Switch>
