@@ -11,6 +11,7 @@ import { Small, Body, Header1 } from "./Typography";
 
 import theme from "../../utils/theme";
 import { jellyMixin } from "../../utils/mixins";
+import { Tooltip } from "@material-ui/core";
 
 const { primary, secondary, tertiary, white } = theme.colors;
 
@@ -79,7 +80,16 @@ const How = styled.div`
   color: ${tertiary}
 `;
 
-const Card = ({ title, how, type, exercises, isLiked, saveWod, removeWod }) => {
+const Card = ({
+  title,
+  how,
+  type,
+  exercises,
+  isLiked,
+  saveWod,
+  removeWod,
+  isGuest,
+}) => {
   return (
     <Container>
       <Header isLiked={isLiked}>
@@ -94,12 +104,20 @@ const Card = ({ title, how, type, exercises, isLiked, saveWod, removeWod }) => {
             style={{ cursor: "pointer" }}
           />
         ) : (
-          <HeartOutlineIcon
-            width={24}
-            fill={white}
-            onClick={saveWod}
-            style={{ cursor: "pointer" }}
-          />
+          <Tooltip
+            title={
+              isGuest
+                ? "You have to sign in to save this wod 👋"
+                : "Save to Favorites"
+            }
+          >
+            <HeartOutlineIcon
+              width={24}
+              fill={white}
+              onClick={saveWod}
+              style={{ cursor: "pointer" }}
+            />
+          </Tooltip>
         )}
       </Header>
       <Type>
@@ -122,6 +140,7 @@ Card.propTypes = {
   saveWod: PropTypes.func,
   removeWod: PropTypes.func,
   isLiked: PropTypes.bool,
+  isGuest: PropTypes.bool,
   title: PropTypes.string.isRequired,
   how: PropTypes.string,
   type: PropTypes.oneOf(["For Time", "For Rounds / Reps", "For Load"]),
@@ -129,7 +148,14 @@ Card.propTypes = {
 };
 
 Card.defaultProps = {
+  saveWod: () => {},
+  removeWod: () => {},
   isLiked: false,
+  isGuest: false,
+  title: "",
+  how: "",
+  type: "For Time",
+  exercises: [],
 };
 
 export default Card;
