@@ -1,18 +1,36 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { rgba } from "polished";
 
 import Button from "../../UI/Button";
 import Column from "../../UI/Column";
 import Logo from "../../UI/Logo";
 import { Body } from "../../UI/Typography";
 import FacebookOutlineIcon from "../../UI/Icons/FacebookOutline";
+import ShieldCheckIcon from "../../UI/Icons/ShieldCheck";
+
+import { jellyMixin } from "../../../utils/mixins";
+import theme from "../../../utils/theme";
+
+const { tertiary } = theme.colors;
 
 const StyledLink = styled(Link)`
-  color: white;
+  color: ${rgba(tertiary, 0.6)};
 
   &:hover {
-    color: red;
+    color: ${tertiary};
+    svg {
+      fill: ${tertiary};
+    }
+    ${jellyMixin}
+  }
+
+  svg {
+    fill: ${tertiary};
+    margin-right: 0.25rem;
+    width: 16px;
+    height: 16px;
   }
 `;
 
@@ -22,13 +40,16 @@ const Login = ({ signin }) => (
     <Body style={{ marginBottom: "2rem" }}>
       Generate a random Wod and kill it!
     </Body>
-    <Column>
+    <Column spacing={0.5}>
       <Button onClick={signin}>
         <FacebookOutlineIcon />
         Sign in with Facebook
       </Button>
       <Body color="secondary">or</Body>
-      <StyledLink to="/guest">Continue as Guest</StyledLink>
+      <StyledLink to="/guest">
+        {/* <ShieldCheckIcon /> */}
+        Continue as Guest
+      </StyledLink>
     </Column>
   </React.Fragment>
 );
