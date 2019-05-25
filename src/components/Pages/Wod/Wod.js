@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 import Button from "../../UI/Button";
 import Card from "../../UI/Card";
@@ -46,6 +47,7 @@ const Wod = ({
   generate,
   isRandom,
   goBack,
+  isGuest,
 }) => {
   return (
     <Container>
@@ -57,6 +59,7 @@ const Wod = ({
         </GoBackDiv>
       )}
       <Card
+        isGuest={isGuest}
         title={wod.title}
         type={wod.type}
         how={wod.how}
@@ -73,6 +76,28 @@ const Wod = ({
       )}
     </Container>
   );
+};
+
+Wod.propTypes = {
+  wod: PropTypes.object,
+  saveWod: PropTypes.func,
+  removeWod: PropTypes.func,
+  generate: PropTypes.func,
+  goBack: PropTypes.func,
+  isLiked: PropTypes.bool,
+  isRandom: PropTypes.bool,
+  isGuest: PropTypes.bool,
+};
+
+Wod.defaultProps = {
+  wod: {},
+  saveWod: () => {},
+  removeWod: () => {},
+  generate: () => {},
+  goBack: () => {},
+  isLiked: false,
+  isRandom: false,
+  isGuest: false,
 };
 
 export default Wod;
