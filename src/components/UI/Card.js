@@ -105,6 +105,7 @@ const Card = ({
           />
         ) : (
           <Tooltip
+            placement="right"
             title={
               isGuest
                 ? "You have to sign in to save this wod 👋"
