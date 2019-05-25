@@ -18,7 +18,7 @@ Check the live app [here](https://woddd.run).
 
 - [x] About & Favorites page design
 - [x] Find way to handle favorites Wods
-- [ ] Add Guest support
+- [x] Add Guest support
 - [x] Footer
 - [ ] Delete account feature
 
