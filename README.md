@@ -20,6 +20,7 @@ Check the live app [here](https://woddd.run).
 - [x] Find way to handle favorites Wods
 - [x] Add Guest support
 - [x] Footer
+- [ ] Replace Facebook auth with mail(maybe both 👨‍)
 - [ ] Delete account feature
 
 ## 🚧 WIP
