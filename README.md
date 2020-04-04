@@ -14,13 +14,8 @@
 
 Check the live app [here](https://woddd.run).
 
-## 🏃 To-do
+## 📜License
 
-- [x] About & Favorites page design
-- [x] Find way to handle favorites Wods
-- [x] Add Guest support
-- [x] Footer
-- [ ] Replace Facebook auth with mail(maybe both 👨‍)
-- [ ] Delete account feature
+Copyright (c) 2019-present Jim Raptis. All rights reserved.
 
-## 🚧 WIP
+**The code, design and idea in this repository are intellectual property of the individual mentioned above (unless otherwise stated) and as such CANNOT be copied, modified, sublicensed or redistributed without permission from the author.**
